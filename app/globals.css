@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #252726;
+  --background: #252726;
+  --foreground: #fff;
 }
 
 @theme inline {
@@ -18,16 +18,22 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #252726;
+    --foreground: ##E0E0E0;
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  scroll-behavior: smooth
+  color: #E0E0E0;
+  /* scroll-behavior: smooth */
 }
+
+/* @layer utilities {
+  .swiper-wrapper {
+    @apply flex;
+  }
+} */
 
 @utility flex-center {
   @apply flex justify-center items-center;

@@ -8,84 +8,214 @@ import banner from '@/public/img/banner.jpg';
 
 const navLinks = [
     {
-        id: "home",
+        id: "#home",
         title: "Home",
     },
     {
-        id: "shopAll",
+        id: "#shopAll",
         title: "shop all",
     },
     {
-        id: "bestsellers",
+        id: "#bestsellers",
         title: "bestsellers",
     },
     {
-        id: "perfumes",
+        id: "#perfumes",
         title: "perfumes",
     },
     {
-        id: "About",
+        id: "#About",
         title: "About Us",
     },
     {
-        id: "blog",
+        id: "#blog",
         title: "Blog",
     },
 ];
 
-const buttonBestSellers = ["Bellavita", "Bellavita", "Bellavita", "Bellavita", "Bellavita", "Bellavita",]
+const buttonBestSellers = [
+    "All",
+    "Night",
+    "Daily",
+    "Elegant",
+    "Romantic",
+    "Warm"
+];
 
 const bestSellers = [
+    // NIGHT
+    {
+        img: parfum1,
+        title: 'Moonlit Flour - Eau de Parfum',
+        desc: 'A scent for midnight souls—floral, spicy, and hypnotic.',
+        size: '50ml',
+        price: 'Rp.120.000,00',
+        category: "Night"
+    },
+    {
+        img: parfum1,
+        title: 'Nocturnal Whisper - Eau de Parfum',
+        desc: 'Dark berries, soft musk, and warm vanilla for deep evenings.',
+        size: '50ml',
+        price: 'Rp.130.000,00',
+        category: "Night"
+    },
+    {
+        img: parfum1,
+        title: 'Velvet Midnight - Eau de Parfum',
+        desc: 'Smooth amber with a seductive smoky finish.',
+        size: '50ml',
+        price: 'Rp.140.000,00',
+        category: "Night"
+    },
+
+    // DAILY
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Pure Blossom - Eau de Parfum',
+        desc: 'Soft floral freshness perfect for everyday use.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.110.000,00',
+        category: "Daily"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Morning Dew - Eau de Parfum',
+        desc: 'Crisp green tea and citrus blend for a refreshing daily vibe.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.115.000,00',
+        category: "Daily"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Soft Breeze - Eau de Parfum',
+        desc: 'Clean cotton notes with a soft airy finish.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.105.000,00',
+        category: "Daily"
+    },
+
+    // ELEGANT
+    {
+        img: parfum3,
+        title: 'Royal Essence - Eau de Parfum',
+        desc: 'Luxurious white florals wrapped with creamy sandalwood.',
+        size: '50ml',
+        price: 'Rp.150.000,00',
+        category: "Elegant"
+    },
+    {
+        img: parfum3,
+        title: 'Opaline Glow - Eau de Parfum',
+        desc: 'Elegant jasmine and warm vanilla in a timeless blend.',
+        size: '50ml',
+        price: 'Rp.145.000,00',
+        category: "Elegant"
+    },
+    {
+        img: parfum3,
+        title: 'Silver Aura - Eau de Parfum',
+        desc: 'Refined citrus and musk with a modern luxury feel.',
+        size: '50ml',
+        price: 'Rp.155.000,00',
+        category: "Elegant"
+    },
+
+    // ROMANTIC
+    {
+        img: parfum3,
+        title: 'Crimson Rose - Eau de Parfum',
+        desc: 'Deep red roses with a hint of sweet warmth.',
+        size: '50ml',
+        price: 'Rp.130.000,00',
+        category: "Romantic"
+    },
+    {
+        img: parfum3,
+        title: 'Blush Petals - Eau de Parfum',
+        desc: 'Soft pink florals for a gentle romantic mood.',
+        size: '50ml',
+        price: 'Rp.125.000,00',
+        category: "Romantic"
+    },
+    {
+        img: parfum3,
+        title: 'Lover’s Serenity - Eau de Parfum',
+        desc: 'Sweet pear blossoms combined with soft musk.',
+        size: '50ml',
+        price: 'Rp.135.000,00',
+        category: "Romantic"
+    },
+
+    // WARM
+    {
+        img: parfum4,
+        title: 'Amber Heat - Eau de Parfum',
+        desc: 'Warm amber and spiced vanilla creating a cozy aura.',
+        size: '50ml',
+        price: 'Rp.140.000,00',
+        category: "Warm"
+    },
+    {
+        img: parfum4,
+        title: 'Golden Ember - Eau de Parfum',
+        desc: 'Burnt caramel and warm woods—comforting and rich.',
+        size: '50ml',
+        price: 'Rp.145.000,00',
+        category: "Warm"
+    },
+    {
+        img: parfum4,
+        title: 'Honey Spice - Eau de Parfum',
+        desc: 'Sweet honey with cinnamon warmth for bold personalities.',
+        size: '50ml',
+        price: 'Rp.120.000,00',
+        category: "Warm"
+    },
+
+    // EXTRA RANDOM VARIASI (BONUS)
+    {
+        img: parfum2,
+        title: 'Crystal Dawn - Eau de Parfum',
+        desc: 'Fresh citrus with musky undertones—light and uplifting.',
+        size: '50ml',
+        price: 'Rp.115.000,00',
+        category: "Daily"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Obsidian Nightfall - Eau de Parfum',
+        desc: 'Intense dark spices perfect for late-night elegance.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.150.000,00',
+        category: "Night"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Pearl Satin - Eau de Parfum',
+        desc: 'Soft oriental florals giving a refined feminine aura.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.135.000,00',
+        category: "Elegant"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Romance Mist - Eau de Parfum',
+        desc: 'Sweet berries combined with gentle floral notes.',
         size: '50ml',
-        price: 'Rp.100.000,00'
+        price: 'Rp.128.000,00',
+        category: "Romantic"
     },
     {
         img: parfum2,
-        title: 'Moonlit Flour - Eau de Parfum',
-        desc: 'A Scent for midnight souls-floral, spicy, and hyptonic.',
+        title: 'Warm Silk - Eau de Parfum',
+        desc: 'Creamy tonka bean layered with soft vanilla warmth.',
         size: '50ml',
-        price: 'Rp.100.000,00'
-    },
-]
+        price: 'Rp.138.000,00',
+        category: "Warm"
+    }
+];
+
 
 const auraParfum = [
     {
@@ -120,9 +250,28 @@ const singleParfum = [
         title: 'Aura for Everyone',
         subTitle: 'A scent for every soul, every story',
         desc: 'A hypnotic blend oif night-blooming jasmine, warm amber, and exotic spices. Perfect for the mysterious and alluring.',
-        disc: 'Rp.85..000,00',
-        price: 'Rp.100.000,00'
-    }
+        disc: 'Rp.85.000,00',
+        price: 'Rp.100.000,00',
+        type: 'oriental'
+    },
+    {
+        img: parfum2,
+        title: 'Aura for Everyone',
+        subTitle: 'A scent for every soul, every story',
+        desc: 'A hypnotic blend oif night-blooming jasmine, warm amber, and exotic spices. Perfect for the mysterious and alluring.',
+        disc: 'Rp.75.000,00',
+        price: 'Rp.90.000,00',
+        type: 'floral'
+    },
+    {
+        img: parfum3,
+        title: 'Aura for Everyone',
+        subTitle: 'A scent for every soul, every story',
+        desc: 'A hypnotic blend oif night-blooming jasmine, warm amber, and exotic spices. Perfect for the mysterious and alluring.',
+        disc: 'Rp.90.000,00',
+        price: 'Rp.120.000,00',
+        type: 'spicy'
+    },
 ]
 
 const blogParfum = [
@@ -140,7 +289,7 @@ const blogParfum = [
     },
 ]
 
-const faq = [
+const listFaq = [
     {
         title: 'What is Webflow and why is it the best website builder?',
         desc: 'A hypnotic blend oif night-blooming jasmine, warm amber, and exotic spices. Perfect for the mysterious and alluring.'
@@ -174,11 +323,57 @@ const openingHours = [
     },
 ]
 
-const listShop = ['New Arrivals', 'Best Sellers', 'Gift Sets', 'Sample Sets', 'Sale'
+
+const listShop = [
+    {
+        name: 'New Arrivals',
+        url: '#'
+    },
+    {
+        name: 'Best Sellers',
+        url: '#'
+    },
+    {
+        name: 'Gift Sets',
+        url: '#'
+    },
+    {
+        name: 'Sample Sets',
+        url: '#'
+    },
+    {
+        name: 'Sale',
+        url: '#'
+    },
 ]
 
-const listServices = ['Orders', 'Details', 'Return', 'FAQs'
+const listServices = [
+    {
+        name: 'Orders',
+        url: '#'
+    },
+    {
+        name: 'Details',
+        url: '#'
+    },
+    {
+        name: 'Return',
+        url: '#'
+    },
+    {
+        name: 'FAQs',
+        url: '#'
+    }
 ]
+
+const listDelivery = [
+    {
+        name: 'Delivery',
+        url: '#'
+    },
+]
+
+
 
 const socials = [
     {
@@ -203,4 +398,4 @@ const socials = [
     },
 ];
 
-export { navLinks, buttonBestSellers, auraParfum, bestSellers, singleParfum, blogParfum, faq, openingHours, listShop, listServices, socials }
+export { navLinks, buttonBestSellers, auraParfum, bestSellers, singleParfum, blogParfum, listFaq, openingHours, listShop, listServices, listDelivery, socials }

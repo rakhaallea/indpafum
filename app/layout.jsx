@@ -11,6 +11,7 @@ import "./globals.css";
 const josefinSans = Josefin_Sans({
   variable: "--font-josefin-sans",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 const prata = Prata({
@@ -22,7 +23,7 @@ const prata = Prata({
 const poppins = Poppins({
   variable: "--font-poppins",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 const josefinSlab = Josefin_Slab({
@@ -42,6 +43,8 @@ const portLligatSlab = Port_Lligat_Slab({
   weight: "400",
 });
 
+import 'remixicon/fonts/remixicon.css'
+
 export const metadata = {
   title: "INDPAFUM",
   description: "Temukan Aura Terbaik Anda",
@@ -49,7 +52,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <body
         className={`${josefinSans.variable} ${poppins.variable} ${prata.variable} ${josefinSlab.variable} ${ptMono.variable} ${portLligatSlab.variable} antialiased`}
       >

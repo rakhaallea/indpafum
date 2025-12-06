@@ -1,8 +1,37 @@
-import React from 'react'
+"use client"
+
+import Link from "next/link"
+
+import { navLinks } from "@/constant"
+
+import { useState } from "react"
 
 const Navbar = () => {
+    const [isActive, setIsActive] = useState(false)
+
     return (
-        <div className=''>Navbar</div>
+        <nav className='relative container mx-auto py-10 font-josefin-sans'>
+            <div className='flex justify-between md:justify-end items-center px-4 md:px-8'>
+                <h1
+                    className='lg:w-full lg:pl-28 md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
+                <div className='flex-center gap-2 md:gap-8'>
+                    <Link href={"#"}>
+                        <i className="ri-map-pin-line ri-xl"></i>
+                    </Link>
+                    <Link href={"#"}>
+                        <i className="ri-shopping-cart-line ri-xl"></i>
+                    </Link>
+                    <button onClick={() => setIsActive(!isActive)}>
+                        <i className="ri-menu-line ri-xl lg:hidden"></i>
+                    </button>
+                </div>
+            </div>
+            <ul className={`absolute top-28 right-4 lg:static z-99 flex-col gap-4 lg:flex-row lg:flex justify-between items-center w-1/2 mx-auto py-6 tracking-widest capitalize bg-[#252726] lg:bg-transparent lg:translate-y-0 transition-all duration-300 lg:transition-none ease-in-out ${!isActive ? "opacity-0 lg:opacity-100 -translate-y-4" : "opacity-100 translate-0"}`}>
+                {navLinks.map((nav) => (
+                    <li key={nav.id} className="px-6 py-2 lg:px-0 lg:py-0 hover:bg-[#9B7E5B] lg:hover:bg-transparent lg:hover:text-[#9B7E5B]"><Link href={nav.id}>{nav.title}</Link></li>
+                ))}
+            </ul>
+        </nav>
     )
 }
 
