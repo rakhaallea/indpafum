@@ -19,7 +19,7 @@ const Navbar = () => {
                 scrub: true,
             }
         }).fromTo('nav',
-            { backgroundColor: 'transparent' },
+            { backgroundColor: 'rgba(37, 39, 38, 1)' },
             { backgroundColor: 'rgba(37, 39, 38, .8)', backdropFilter: 'blur(10px)' }
         );
     });

@@ -6,9 +6,9 @@ import Image from 'next/image'
 
 const Whyaura = () => {
     return (
-        <div className='relative h-auto pt-30 flex flex-col md:flex-row justify-between px-4 lg:px-20 gap-12　overflow-hidden'>
+        <div className='relative h-auto pt-30 flex flex-col md:flex-row justify-between px-4 lg:px-10 gap-12　overflow-hidden'>
 
-            <div className='pt-30 md:pt-20 lg:pt-30 pb-30 flex flex-col gap-12 justify-center items-start tracking-widest order-2 md:order-1'>
+            <div className='pt-30 md:pt-20 lg:pt-30 pb-30 flex flex-col gap-12 justify-center items-start lg:pr-12 tracking-widest order-2 md:order-1'>
                 <h1 className='text-4xl lg:text-5xl font-prata'>Why You Need Aura</h1>
                 <div>
                     <h3 className='font-poppins text-xl lg:text-2xl font-semibold mb-2'>Because Your presence deserves a signatture</h3>
