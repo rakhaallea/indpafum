@@ -1,9 +1,5 @@
 'use client'
 
-import banner from '@/public/img/banner.jpg'
-import imgPafum from '@/public/img/4.png'
-
-import Image from 'next/image'
 import { listFaq } from '@/constant'
 import { useState } from 'react'
 

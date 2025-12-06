@@ -11,6 +11,7 @@ const AuraProducts = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 md:gap-10 font-poppins">
+
                 {
                     auraParfum.map((product, index) => (
                         <div className='w-full font-poppins flex-col flex gap-4 justify-center items-start text-start' key={index}>
@@ -31,6 +32,7 @@ const AuraProducts = () => {
                         </div>
                     ))
                 }
+
             </div>
 
             <div className="absolute top-20 left-0 w-160 h-160 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">

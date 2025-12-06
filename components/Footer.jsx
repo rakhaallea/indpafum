@@ -19,7 +19,7 @@ const Footer = () => {
                     {
                         socials.map((social) => (
                             <Link href={social.url} key={social.name}>
-                                <i className={`${social.icon} text-2xl md:text-5xl`}></i>
+                                <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all`}></i>
                             </Link>
                         ))
                     }
@@ -43,7 +43,7 @@ const Footer = () => {
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listShop.map((shop) => (
-                                <li key={shop.name}><Link href={shop.url}>{shop.name}</Link></li>
+                                <li key={shop.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={shop.url}>{shop.name}</Link></li>
                             ))
                         }
                     </ul>
@@ -54,7 +54,7 @@ const Footer = () => {
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listServices.map((services) => (
-                                <li key={services.name}><Link href={services.url}>{services.name}</Link></li>
+                                <li key={services.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={services.url}>{services.name}</Link></li>
                             ))
                         }
                     </ul>
@@ -65,7 +65,7 @@ const Footer = () => {
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listDelivery.map((delivery) => (
-                                <li key={delivery.name}><Link href={delivery.url}>{delivery.name}</Link></li>
+                                <li key={delivery.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={delivery.url}>{delivery.name}</Link></li>
                             ))
                         }
                     </ul>

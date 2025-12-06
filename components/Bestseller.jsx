@@ -49,6 +49,7 @@ const Bestseller = () => {
                     className='max-w-[90%] lg:max-w-[95%]'
                 >
 
+                    {/* Button items */}
                     {buttonBestSellers.map((btn, index) => (
                         <SwiperSlide key={index}>
                             <div className='p-[.8px] rounded-full bg-[linear-gradient(90deg,#FFFFFF,#999999)]'>
@@ -98,6 +99,7 @@ const Bestseller = () => {
                     className='w-full'
                 >
 
+                    {/* Product items */}
                     {filteredData.map((product, index) => (
                         <SwiperSlide>
                             <div className='w-full font-poppins flex-col flex gap-4 justify-center items-center text-center' key={index}>

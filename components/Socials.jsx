@@ -23,7 +23,7 @@ const Socials = () => {
                     {
                         socials.map((social, index) => (
                             <Link href={social.url} key={social.name}>
-                                <i className={`${social.icon} text-2xl md:text-5xl ${index === 3 ? "hidden" : null} `}></i>
+                                <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all ${index === 3 ? "hidden" : null} `}></i>
                             </Link>
                         ))
                     }

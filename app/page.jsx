@@ -9,9 +9,14 @@ import Socials from '@/components/Socials';
 import ContactUs from '@/components/ContactUs';
 import Footer from '@/components/Footer';
 
+import gsap from "gsap"
+import { ScrollTrigger, SplitText } from "gsap/all"
+
+gsap.registerPlugin(ScrollTrigger, SplitText)
+
 export default function Home() {
   return (
-    <main >
+    <main className='relative'>
       <Navbar />
       <Hero />
       <Bestseller />

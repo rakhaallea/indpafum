@@ -18,7 +18,7 @@ const SingleProduct = () => {
         <div className="pt-20 pb-20 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-14 px-4 md:px-10 overflow-hidden relative">
 
             {/* Image Desktop */}
-            <div className="hidden md:block w-400 lg:w-1/2 h-96 overflow-hidden">
+            <div className="hidden md:block w-400 lg:w-1/2 h-160 overflow-hidden">
                 <Image
                     src={parfum.img}
                     className="object-cover object-[50%,80%] w-full h-full scale-110 hover:scale-120 origin-bottom transition-transform duration-300 ease-out cursor-pointer"
