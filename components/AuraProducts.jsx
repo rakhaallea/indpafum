@@ -4,13 +4,13 @@ import { auraParfum } from "@/constant"
 
 const AuraProducts = () => {
     return (
-        <div className="pt-10 md:pt-20 pb-20 flex flex-col gap-10 md:gap-20 px-4 overflow-hidden relative">
+        <div className="pt-10 md:pt-20 pb-20 flex flex-col gap-10 md:gap-20 px-4 overflow-hidden relative" id="perfumes">
             <div className="text-start lg:text-center">
                 <h1 className="mb-8 text-3xl md:text-5xl font-prata">Aura for Everyone</h1>
                 <p className="font-poppins text-xl md:text-2xl font-light">A scent for every soul, every story</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 md:gap-10 font-poppins">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 justify-center items-center gap-4 md:gap-10 font-poppins" >
 
                 {
                     auraParfum.map((product, index) => (
