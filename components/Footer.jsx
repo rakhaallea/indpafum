@@ -5,13 +5,13 @@ import { socials, listShop, listServices, listDelivery } from "@/constant"
 const Footer = () => {
     return (
         <div className="pt-10 pb-30 md:pt-20 font-prata px-4 md:px-0 relative overflow-hidden">
-            <div className="w-full md:w-1/2 mx-auto text-center  flex flex-col gap-8">
+            <div className="w-full lg:w-1/2 mx-auto text-center  flex flex-col gap-8">
                 <h2 className="text-3xl">Subscribe To Our Newsletter</h2>
-                <div className="flex flex-col md:flex-row gap-4 md:gap-6">
+                <div className="flex flex-col md:px-20 lg:px-0 lg:flex-row gap-4 md:gap-6">
                     <input type="text" className="bg-white text-slate-700 ring-0 w-full py-2 md:py-4 px-4 rounded-2xl" placeholder="Enter your email" />
                     <button
                         href={'#'}
-                        className="py-2 md:py-px px-6 rounded-xl border-[.8px] bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] text-center text-sm md:text-lg font-light cursor-pointer">
+                        className="py-2 md:py-2 px-6 rounded-xl border-[.8px] bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] text-center text-sm md:text-lg font-light cursor-pointer">
                         Subscribe
                     </button>
                 </div>
