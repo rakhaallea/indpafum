@@ -1,9 +1,10 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Bestseller from '@/components/Bestseller';
+import AllProduct from '@/components/AllProduct';
 import Whyaura from '@/components/Whyaura';
-import AuraProducts from '@/components/AuraProducts';
+import BestSeller from '@/components/BestSeller';
 import SingleProduct from '@/components/SingleProduct';
+import LatestProduct from '@/components/LatestProduct';
 import FAQ from '@/components/FAQ';
 import Socials from '@/components/Socials';
 import ContactUs from '@/components/ContactUs';
@@ -16,13 +17,14 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 
 export default function Home() {
   return (
-    <main className='relative'>
+    <main className='relative overflow-hidden'>
       <Navbar />
       <Hero />
-      <Bestseller />
-      <Whyaura />
-      <AuraProducts />
       <SingleProduct />
+      <BestSeller />
+      <LatestProduct />
+      <AllProduct />
+      <Whyaura />
       <FAQ />
       <Socials />
       <ContactUs />

@@ -6,11 +6,11 @@ import { openingHours } from "@/constant"
 
 const ContactUs = () => {
     return (
-        <div className="pt-20 pb-20 font-prata relative overflow-hidden">
+        <div className="contactus" id="contactus">
             <h1 className="mb-14 text-center text-3xl lg:text-5xl">Contact US</h1>
 
-            <div className="flex flex-col md:flex-row gap-4 justify-between md:items-center px-4 lg:px-24">
-                <div className="flex flex-col gap-6 lg:gap-10 order-2 md:order-1">
+            <div className="body">
+                <div className="left">
                     <div>
                         <h2 className="text-xl lg:text-3xl">Email Us</h2>
                         <p className="text-sm lg:text-base underline">indpafume@gmail.com</p>
@@ -44,8 +44,16 @@ const ContactUs = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-full md:w-100 lg:w-180 order-1 md:order-2 mb-8 md:mb-0">
-                    <Image src={imgMap} className="w-full h-full object-cover" alt="google Map" />
+                <div className="right">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.94102504437666!2d114.5957578!3d-3.3362411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421004250d3d1%3A0x6bb3c2c98bb9ee05!2sINDPAFUM%20STORE%20KELAYAN!5e0!3m2!1sid!2sid!4v1766648322910!5m2!1sid!2sid"
+                        frameBorder="0"
+                        width="100%"
+                        height={500}
+                        allowFullScreen
+                        title="Maps"
+                    ></iframe>
+
                 </div>
             </div>
 

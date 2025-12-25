@@ -28,13 +28,10 @@ const Navbar = () => {
         <nav className='fixed z-100 w-full px-4 md:px-8 mx-auto py-10 font-josefin-sans'>
             <div className='flex justify-between md:justify-end items-center'>
                 <h1
-                    className='lg:w-full lg:pl-28 md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
+                    className='lg:w-full lg:pl-20 md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
                 <div className='flex-center gap-2 md:gap-8'>
                     <Link href={"#"}>
                         <i className="ri-map-pin-line ri-xl"></i>
-                    </Link>
-                    <Link href={"#"}>
-                        <i className="ri-shopping-cart-line ri-xl"></i>
                     </Link>
                     <button onClick={() => setIsActive(!isActive)}>
                         <i className="ri-menu-line ri-xl lg:hidden"></i>

@@ -5,6 +5,7 @@ import parfum4 from '@/public/img/4.png';
 
 import model from '@/public/img/model.png';
 import banner from '@/public/img/banner.jpg';
+import bannerLanding from '@/public/img/banner_landing.jpg';
 
 const navLinks = [
     {
@@ -12,26 +13,28 @@ const navLinks = [
         title: "Home",
     },
     {
-        id: "#shopAll",
-        title: "shop all",
+        id: "#bestsellers",
+        title: "Bestsellers",
     },
     {
-        id: "#bestsellers",
-        title: "bestsellers",
+        id: "#shopAll",
+        title: "shop All",
     },
     {
         id: "#perfumes",
-        title: "perfumes",
+        title: "Perfumes",
     },
     {
-        id: "#About",
-        title: "About Us",
+        id: "#contactus",
+        title: "Contact Us",
     },
     {
-        id: "#blog",
-        title: "Blog",
+        id: "#faq",
+        title: "FAQ",
     },
 ];
+
+const heroBanner = [bannerLanding, banner, bannerLanding, banner];
 
 const buttonBestSellers = [
     "All",
@@ -373,7 +376,22 @@ const listDelivery = [
     },
 ]
 
-
+const latestUpdates = [
+    {
+        title: 'The Art of Layering Fragrances',
+        desc: 'Discover the secrets of combining different scents to create your unique signature frafrance that evolves throughout the day.',
+        cta: 'Learn more',
+        img: parfum3,
+        date: 'Oktober 15, 2025',
+    },
+    {
+        title: 'The Art of Layering Fragrances',
+        desc: 'Discover the secrets of combining different scents to create your unique signature frafrance that evolves throughout the day.',
+        cta: 'Learn more',
+        img: parfum3,
+        date: 'Oktober 15, 2025',
+    }
+]
 
 const socials = [
     {
@@ -398,4 +416,4 @@ const socials = [
     },
 ];
 
-export { navLinks, buttonBestSellers, auraParfum, bestSellers, singleParfum, blogParfum, listFaq, openingHours, listShop, listServices, listDelivery, socials }
+export { navLinks, heroBanner, buttonBestSellers, auraParfum, bestSellers, singleParfum, blogParfum, listFaq, openingHours, listShop, listServices, listDelivery, socials, latestUpdates }

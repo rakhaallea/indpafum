@@ -38,3 +38,242 @@ body {
 /* @utility overlay-hero {
   @apply flex flex-col gap-6 md:gap-7 max-w-[500px] lg:h-full text-center font-josefin-sans bg-linear-to-br from-[#9B7E5B] from-55% to-[#D7CABB] px-6 md:px-12 lg:px-16 pt-12 pb-6 md:pt-16 lg:pt-20 lg:[clip-path:polygon(0%_0%, 100%_0%, 80%_100%, 20%_100%)]
 } */
+/* Warna bullet */
+.swiper-pagination-bullet {
+  background: rgba(217, 217, 217, 1) !important;
+  width: 22px !important;
+  height: 22px !important;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: rgba(155, 126, 91, 1) !important;
+  width: 22px !important;
+  height: 22px !important;
+}
+
+@layer components {
+
+  /* ===============================
+     Single Product
+  =============================== */
+
+  .product-card {
+    @apply pt-20 pb-20 flex flex-col md:flex-row justify-center items-center gap-10 md:gap-14 px-4 md:px-10 relative;
+  }
+
+  .product-img {
+    @apply object-cover w-full h-full scale-110 origin-bottom transition-transform duration-300 ease-out cursor-pointer;
+    object-position: 50% 80%;
+  }
+
+  .product-img:hover {
+    transform: scale(1.2);
+  }
+
+  .product-body {
+    @apply flex flex-col justify-center gap-10 font-poppins w-full md:w-auto;
+  }
+
+  .product-body-title {
+    @apply flex flex-col gap-4 tracking-widest text-center md:text-left border border-amber-300;
+  }
+
+  .product-body-price {
+    @apply flex gap-4 justify-center md:justify-start;
+  }
+
+  .product-body-countdown {
+    @apply flex flex-col gap-4 items-center md:items-start;
+  }
+
+  .box-countdown {
+    @apply flex flex-col items-center justify-center w-14 h-14 md:w-24 md:h-24 rounded-2xl border;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(153, 153, 153, 0.1));
+  }
+
+  .product-body-stats {
+    @apply flex gap-4 justify-center md:justify-start;
+  }
+
+  .product-body-radio {
+    @apply flex gap-6 justify-center md:justify-start font-light;
+  }
+
+  /* ===============================
+     Best Seller
+  =============================== */
+
+  .bestSellers {
+    @apply pt-10 md:pt-20 pb-20 flex flex-col gap-10 md:gap-20 px-4 relative;
+  }
+
+  .bestSellers-body {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 font-poppins;
+  }
+
+  .bestSellers-img {
+    @apply object-cover w-full h-full scale-100 hover:scale-110 origin-bottom transition-transform duration-300 ease-out cursor-pointer;
+    object-position: 50% 60%;
+  }
+
+  .bestSeller-card-body {
+    @apply flex flex-col gap-4 justify-center items-start text-start;
+  }
+
+  /* ===============================
+     Latest Product
+  =============================== */
+
+  .latestProduct-body {
+    @apply pt-10 flex flex-col md:flex-row justify-center items-center gap-10;
+  }
+
+  .latestProduct-img {
+    @apply object-cover w-full h-full scale-110 origin-[50%_10%] hover:scale-120 transition-transform duration-300 ease-out cursor-pointer;
+    object-position: 50% 10%;
+  }
+
+
+  /* ===============================
+    Product BestSellers
+  =============================== */
+  .shopall {
+    @apply flex items-center flex-col gap-6 tracking-widest;
+  }
+
+  .shopall-product {
+    @apply flex justify-center items-center;
+  }
+
+  .shopall-body {
+    @apply w-full font-poppins flex-col flex gap-4 justify-center items-center text-center
+  }
+
+  .shopall-img {
+    @apply object-cover w-full h-full scale-140 hover:scale-130 origin-bottom transition-transform duration-300 ease-out cursor-pointer;
+    object-position: 50% 60%;
+  }
+
+  /* ===============================
+    Why Aura
+  =============================== */
+  .whyaura {
+    @apply relative h-auto pt-30 flex flex-col md:flex-row justify-between px-4 lg:px-10 gap-12;
+  }
+
+  .whyaura-text-content {
+    @apply pt-30 md:pt-20 lg:pt-30 pb-30 flex flex-col gap-12 justify-center items-start lg:pr-12 tracking-widest;
+  }
+
+  .whyaura-img-content {
+    @apply relative order-1 md:order-2;
+  }
+
+  .whyaura-img-content .primary {
+    @apply mx-auto w-69 h-120 lg:w-99 lg:h-145 rounded-full overflow-hidden;
+  }
+
+  .whyaura-img-content .secondary {
+    @apply absolute -bottom-24 left-0 md:bottom-24 md:-left-14 lg:bottom-40 2xl:bottom-14 lg:-left-20 w-32 h-60 lg:w-52 lg:h-70 rounded-full overflow-hidden z-99;
+  }
+
+  /* ===============================
+    Why Aura
+  =============================== */
+  .faq-body {
+    @apply w-full px-4 md:px-0 md:w-1/2 mx-auto flex flex-col gap-4 font-poppins tracking-wider;
+  }
+
+  .banner-faq {
+    @apply absolute w-210 h-full bg-no-repeat bg-center bg-[url(@/public/img/Faq.png)] px-12 py-26 font-poppins text-slate-800 flex flex-col gap-6
+  }
+
+  .faq-card {
+    @apply flex flex-col justify-center items-center gap-4;
+  }
+
+  /* ===============================
+    Socials
+  =============================== */
+  .socials-container {
+    @apply md:w-[90%] mx-auto pt-12 rounded-2xl border-[.8px] text-center text-sm font-light font-poppins px-4 flex flex-col gap-6;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.3),
+        rgba(153, 153, 153, 0.02))
+  }
+
+  /* ===============================
+    contact us
+  =============================== */
+  .contactus {
+    @apply pt-20 pb-20 font-prata relative;
+  }
+
+  .contactus .body {
+    @apply flex flex-col md:flex-row gap-4 justify-between md:items-center px-4 lg:px-24
+  }
+
+  .contactus .body .left {
+    @apply flex flex-col gap-6 lg:gap-10 order-2 md:order-1;
+  }
+
+  .contactus .body .right {
+    @apply w-full md:w-100 lg:w-180 order-1 md:order-2 mb-8 md:mb-0;
+  }
+
+  /* ===============================
+    footer
+  =============================== */
+  .footer {
+    @apply pt-10 pb-20 md:pt-20 font-prata px-4 md:px-0 relative;
+  }
+
+  .subscribe {
+    @apply w-full lg:w-1/2 mx-auto text-center flex flex-col gap-8;
+  }
+
+  .navlinks {
+    @apply pt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-0 md:px-20 lg:px-40 gap-10 md:gap-20;
+  }
+
+  /* ===============================
+     Button
+  =============================== */
+
+  .btn-primary-outline {
+    @apply p-[.8px] rounded-full;
+    background: linear-gradient(90deg, #FFFFFF, #999999);
+
+  }
+
+  .btn-primary {
+    @apply rounded-full border text-center text-sm font-light transition-all duration-300;
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(153, 153, 153, 0));
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(153, 153, 153, 0.1));
+  }
+
+  .btn-active {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(153, 153, 153, 0.1));
+  }
+
+  .btn-inactive {
+    @apply bg-background;
+  }
+
+  .btn-inactive:hover {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.2),
+        rgba(153, 153, 153, 0.1));
+  }
+
+}
