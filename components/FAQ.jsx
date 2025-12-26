@@ -14,7 +14,7 @@ const FAQ = () => {
     };
 
     return (
-        <div className='pt-20 pb-20 relative' id='faq'>
+        <div className='pt-60 md:pt-20 pb-20 relative' id='faq'>
             <h1 className='text-6xl font-port-lligat-slab mb-12 text-center'>FAQs</h1>
 
             <div className='faq-body'>

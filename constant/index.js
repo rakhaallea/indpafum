@@ -2,6 +2,7 @@ import parfum1 from '@/public/img/1.png';
 import parfum2 from '@/public/img/2.png';
 import parfum3 from '@/public/img/3.png';
 import parfum4 from '@/public/img/4.png';
+import parfum6 from '@/public/img/parfum-bgblack.jpeg';
 
 import model from '@/public/img/model.png';
 import banner from '@/public/img/banner.jpg';
@@ -222,7 +223,7 @@ const bestSellers = [
 
 const auraParfum = [
     {
-        img: parfum4,
+        img: parfum6,
         title: 'Moonlit Flour - Eau de Parfum',
         desc: 'Confident. Grounded. Magnetic.Explore deep, woody, and spicy compositionscrafted  to leave a bold, lasting impression.',
         cta: 'Browse Men’s Scents',
@@ -234,7 +235,7 @@ const auraParfum = [
         cta: 'Browse Men’s Scents',
     },
     {
-        img: parfum4,
+        img: parfum6,
         title: 'Moonlit Flour - Eau de Parfum',
         desc: 'Confident. Grounded. Magnetic.Explore deep, woody, and spicy compositionscrafted  to leave a bold, lasting impression.',
         cta: 'Browse Men’s Scents',
@@ -330,48 +331,36 @@ const openingHours = [
 const listShop = [
     {
         name: 'New Arrivals',
-        url: '#'
+        url: '#shopall'
     },
     {
         name: 'Best Sellers',
-        url: '#'
-    },
-    {
-        name: 'Gift Sets',
-        url: '#'
+        url: '#bestsellers'
     },
     {
         name: 'Sample Sets',
-        url: '#'
-    },
-    {
-        name: 'Sale',
-        url: '#'
+        url: '#whyaura'
     },
 ]
 
 const listServices = [
     {
         name: 'Orders',
-        url: '#'
+        url: 'https://shopee.co.id/indpafum?entryPoint=ShopBySearch&searchKeyword=indpafum'
     },
     {
         name: 'Details',
         url: '#'
     },
     {
-        name: 'Return',
-        url: '#'
-    },
-    {
         name: 'FAQs',
-        url: '#'
+        url: '#faq'
     }
 ]
 
 const listDelivery = [
     {
-        name: 'Delivery',
+        name: 'Client Service is Available from 10.00am - 10.00pm at 08129xxxxx, You can also email us. ',
         url: '#'
     },
 ]
@@ -381,7 +370,7 @@ const latestUpdates = [
         title: 'The Art of Layering Fragrances',
         desc: 'Discover the secrets of combining different scents to create your unique signature frafrance that evolves throughout the day.',
         cta: 'Learn more',
-        img: parfum3,
+        img: parfum6,
         date: 'Oktober 15, 2025',
     },
     {
@@ -397,22 +386,22 @@ const socials = [
     {
         name: "Instagram",
         icon: "ri-instagram-line",
-        url: "#",
+        url: "https://www.instagram.com/indpafum.store?igsh=MTAyOWRmNjFtNnk4aw%3D%3D",
     },
     {
-        name: "X (Twitter)",
-        icon: "ri-twitter-x-line",
-        url: "#",
-    },
-    {
-        name: "Facebook",
-        icon: "ri-facebook-circle-fill",
-        url: "#",
+        name: "Shoppe",
+        icon: "ri-shopping-bag-fill",
+        url: "https://shopee.co.id/indpafum?shopCollection=256100839#product_list",
     },
     {
         name: "Whatsapp",
         icon: "ri-whatsapp-line",
         url: "#",
+    },
+    {
+        name: "Tiktok",
+        icon: "ri-tiktok-fill",
+        url: "https://www.tiktok.com/@indpafum.official",
     },
 ];
 

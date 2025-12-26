@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { socials, listShop, listServices, listDelivery } from "@/constant"
+import { listShop, listServices, listDelivery } from "@/constant"
 
 const Footer = () => {
     return (
@@ -12,11 +12,11 @@ const Footer = () => {
                     <input type="text" className="bg-white text-slate-700 ring-0 w-full py-2 md:py-4 px-4 rounded-2xl" placeholder="Enter your email" />
                     <button
                         href={'#'}
-                        className="py-2 md:py-2 px-6 rounded-xl border-[.8px] bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] text-center text-sm md:text-lg font-light cursor-pointer">
+                        className="py-2 md:py-2 px-6 rounded-xl border-[.8px] btn-primary md:text-lg font-prata font-medium">
                         Subscribe
                     </button>
                 </div>
-                <div className='flex gap-4 justify-center items-center pb-2'>
+                {/* <div className='flex gap-4 justify-center items-center pb-2'>
                     {
                         socials.map((social) => (
                             <Link href={social.url} key={social.name}>
@@ -24,7 +24,7 @@ const Footer = () => {
                             </Link>
                         ))
                     }
-                </div>
+                </div> */}
             </div>
 
             <div className="navlinks">
@@ -35,7 +35,12 @@ const Footer = () => {
                     </p>
                     <span className="flex gap-2 items-center">
                         <i className="ri-map-pin-line"></i>
-                        <p className="text-sm">Jl Teluk Tiram xxxxxx</p>
+                        <Link href={'https://maps.app.goo.gl/XGzdrwRhuHCN5Ed36'} target="_blank" className="text-sm">INDPAFUM STORE TIRAM</Link>
+                    </span>
+                    <span className="flex gap-2 items-center">
+                        <i className="ri-map-pin-line"></i>
+                        <Link href={'https://maps.app.goo.gl/wArjxwCipjo12PaL6'} target="_blank" className="text-sm">INDPAFUM STORE KELAYAN
+                        </Link>
                     </span>
                 </div>
 
@@ -54,19 +59,19 @@ const Footer = () => {
                     <h1 className="text-2xl">Customer Services</h1>
                     <ul className="text-sm flex flex-col gap-2">
                         {
-                            listServices.map((services) => (
-                                <li key={services.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={services.url}>{services.name}</Link></li>
+                            listServices.map((services, index) => (
+                                <li key={services.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={services.url} target={`${index === 0 ? '_blank' : ''}`}>{services.name}</Link></li>
                             ))
                         }
                     </ul>
                 </div>
 
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-2xl">Delivery</h1>
+                    <h1 className="text-2xl">Help</h1>
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listDelivery.map((delivery) => (
-                                <li key={delivery.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={delivery.url}>{delivery.name}</Link></li>
+                                <li key={delivery.name} className="hover:text-[#D7CABB] duration-150 transition-all"><Link href={delivery.url} target="_blank">{delivery.name}</Link></li>
                             ))
                         }
                     </ul>

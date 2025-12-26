@@ -15,7 +15,7 @@ const BestSeller = () => {
                 {
                     auraParfum.map((product, index) => (
                         <div className='w-full font-poppins bestSeller-card-body' key={index}>
-                            <div className='w-full h-70 overflow-hidden'>
+                            <div className='w-full h-70 overflow-hidden shadow-2xl shadow-slate-500/30'>
                                 <Image
                                     src={product.img}
                                     className='bestSellers-img'
@@ -37,7 +37,7 @@ const BestSeller = () => {
 
             </div>
 
-            <div className="absolute top-20 left-0 w-160 h-160 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
+            <div className="absolute top-20 right-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
             </div>
         </div>
     )

@@ -30,7 +30,7 @@ const Navbar = () => {
                 <h1
                     className='lg:w-full lg:pl-20 md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
                 <div className='flex-center gap-2 md:gap-8'>
-                    <Link href={"#"}>
+                    <Link href={"https://maps.app.goo.gl/4jtuyxEwpEuYrMBw7"} target="_blank" rel="noopener noreferrer">
                         <i className="ri-map-pin-line ri-xl"></i>
                     </Link>
                     <button onClick={() => setIsActive(!isActive)}>

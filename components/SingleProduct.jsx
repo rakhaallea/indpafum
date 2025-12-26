@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 import { singleParfum } from "@/constant"
 
@@ -14,16 +14,55 @@ const SingleProduct = () => {
     // Ambil data sesuai radio
     const parfum = singleParfum.find(p => p.type === type)
 
+    // Countdown Logic
+    const [timeLeft, setTimeLeft] = useState({
+        days: "00",
+        hours: "00",
+        minutes: "00",
+        seconds: "00"
+    })
+
+    useEffect(() => {
+        // Set end date - 7 hari dari sekarang (bisa kamu ubah)
+        const endDate = new Date()
+        endDate.setDate(endDate.getDate() + 7)
+
+        const countdown = setInterval(() => {
+            const now = new Date().getTime()
+            const distance = endDate.getTime() - now
+
+            if (distance < 0) {
+                clearInterval(countdown)
+                return setTimeLeft({
+                    days: "00",
+                    hours: "00",
+                    minutes: "00",
+                    seconds: "00"
+                })
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+            setTimeLeft({
+                days: String(days),
+                hours: String(hours).padStart(2, "0"),
+                minutes: String(minutes).padStart(2, "0"),
+                seconds: String(seconds).padStart(2, "0")
+            })
+        }, 1000)
+
+        return () => clearInterval(countdown)
+    }, [])
+
     return (
         <div className="product-card">
 
             {/* Image Desktop */}
-            <div className="hidden md:block w-400 lg:w-1/2 h-160 overflow-hidden">
-                <Image
-                    src={parfum.img}
-                    className="product-img"
-                    alt={parfum.title}
-                />
+            <div className="hidden md:block w-400 lg:w-1/2 h-160 overflow-hidden shadow-2xl shadow-slate-500/30">
+                <Image src={parfum.img} className="product-img" alt={parfum.title} />
             </div>
 
             <div className="product-body">
@@ -37,38 +76,44 @@ const SingleProduct = () => {
 
                 {/* Image Mobile */}
                 <div className="w-full h-60 overflow-hidden md:hidden">
-                    <Image
-                        src={parfum.img}
-                        className="object-cover object-[50%,80%] w-full h-full scale-110 hover:scale-120 origin-bottom transition-transform duration-300"
-                        alt={parfum.title}
-                    />
+                    <Image src={parfum.img} className="object-cover object-[50%,80%] w-full h-full scale-110 hover:scale-120 origin-bottom transition-transform duration-300" alt={parfum.title} />
                 </div>
 
                 {/* Price */}
-                <div className="flex gap-4 justify-center md:justify-start">
+                <div className="product-body-price">
                     <span className="text-xl md:text-2xl">{parfum.disc}</span>
                     <span className="text-xl md:text-2xl line-through text-gray-400">{parfum.price}</span>
                 </div>
 
                 {/* Countdown */}
-                <div className="flex flex-col gap-4 items-center md:items-start">
+                <div className="product-body-countdown">
                     <p className="font-light text-sm">Limited Time Offer Ends in :</p>
 
                     <div className="flex gap-3">
-                        {[["2", "Days"], ["23", "Hours"], ["59", "Minutes"], ["54", "Seconds"]].map(([num, label]) => (
-                            <div
-                                key={label}
-                                className="flex flex-col items-center justify-center w-14 h-14 md:w-24 md:h-24 rounded-2xl border bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))]"
-                            >
-                                <span>{num}</span>
-                                <span className="text-[10px] md:text-base">{label}</span>
-                            </div>
-                        ))}
+                        <div className="box-countdown">
+                            <span>{timeLeft.days}</span>
+                            <span className="text-[10px] md:text-base">Days</span>
+                        </div>
+
+                        <div className="box-countdown">
+                            <span>{timeLeft.hours}</span>
+                            <span className="text-[10px] md:text-base">Hours</span>
+                        </div>
+
+                        <div className="box-countdown">
+                            <span>{timeLeft.minutes}</span>
+                            <span className="text-[10px] md:text-base">Minutes</span>
+                        </div>
+
+                        <div className="box-countdown">
+                            <span>{timeLeft.seconds}</span>
+                            <span className="text-[10px] md:text-base">Seconds</span>
+                        </div>
                     </div>
                 </div>
 
                 {/* Stats */}
-                <div className="flex gap-4 justify-center md:justify-start">
+                <div className="product-body-stats">
                     <div className="flex items-center gap-2 text-xs">
                         <i className="ri-star-fill"></i>
                         <p className="font-light">4.9/5 (2.4k reviews)</p>
@@ -80,25 +125,16 @@ const SingleProduct = () => {
                 </div>
 
                 {/* Button */}
-                <Link
-                    href={'#'}
-                    className="w-full md:w-96 py-3 rounded-full border hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] bg-[linear-gradient(90deg,rgba(255,255,255,0.1),rgba(153,153,153,0))] text-center text-sm font-light"
-                >
+                <Link href={'#'} className="btn-primary w-full md:w-96 py-3">
                     Shop now
                 </Link>
 
                 {/* CATEGORY RADIO */}
-                <div className="flex gap-6 justify-center md:justify-start font-light">
+                <div className="product-body-radio">
                     {["oriental", "floral", "spicy"].map((cat) => (
                         <label key={cat} className="flex items-center gap-3 cursor-pointer">
-                            <input
-                                type="radio"
-                                name="category"
-                                value={cat}
-                                className="peer sr-only"
-                                checked={type === cat}
-                                onChange={() => setType(cat)}
-                            />
+                            <input type="radio" name="category" value={cat} className="peer sr-only"
+                                checked={type === cat} onChange={() => setType(cat)} />
                             <span className="w-3 h-3 rounded-full border-2 border-gray-300 peer-checked:bg-gray-300"></span>
                             <p className="text-xs capitalize">{cat}</p>
                         </label>

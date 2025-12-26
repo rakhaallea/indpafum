@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 const Whyaura = () => {
     return (
-        <div className='whyaura'>
+        <div className='whyaura' id='whyaura'>
 
             <div className='whyaura-text-content'>
                 <h1 className='text-4xl lg:text-5xl font-prata'>Why You Need Aura</h1>

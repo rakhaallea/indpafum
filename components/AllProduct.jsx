@@ -23,7 +23,7 @@ const AllProduct = () => {
             : allProduct.filter(item => item.category === isActive);
 
     return (
-        <div className='pt-20 pb-20 h-auto font-prata flex flex-col gap-18 px-4 relative overflow-hidden' id='shopAll' >
+        <div className='pt-20 md:pb-20 h-auto font-prata flex flex-col gap-18 px-4 relative overflow-hidden' id='shopAll' >
 
             {/* button bestseller */}
             <div className='flex justify-center items-center gap-8'>
@@ -102,7 +102,7 @@ const AllProduct = () => {
                     {filteredData.map((product, index) => (
                         <SwiperSlide>
                             <div className='shopall-body' key={index}>
-                                <div className='w-full h-70 overflow-hidden'>
+                                <div className='w-full h-70 overflow-hidden shadow-2xl shadow-slate-500/20'>
                                     <Image src={product.img}
                                         className='shopall-img' alt={`img-${index}`} />
                                 </div>

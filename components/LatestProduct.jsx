@@ -16,11 +16,11 @@ const LatestProduct = () => {
                     {
                         latestUpdates.map((card, index) => (
                             <div className="w-full md:w-150" key={index}>
-                                <div className="w-full md:w-[85%] h-70 overflow-hidden ">
+                                <div className="w-full md:w-[85%] h-70 overflow-hidden shadow-2xl shadow-slate-500/30">
                                     <Image
                                         src={card.img}
                                         alt="img-1"
-                                        className="w-full h-full latestProduct-img"
+                                        className="latestProduct-img"
                                     />
                                 </div>
                                 <div className="flex flex-col justify-center gap-4 pt-8">

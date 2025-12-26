@@ -43,7 +43,7 @@ body {
   background: rgba(217, 217, 217, 1) !important;
   width: 22px !important;
   height: 22px !important;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .swiper-pagination-bullet-active {
@@ -111,7 +111,7 @@ body {
   }
 
   .bestSellers-body {
-    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-10 font-poppins;
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-14 md:gap-10 font-poppins;
   }
 
   .bestSellers-img {
@@ -132,7 +132,7 @@ body {
   }
 
   .latestProduct-img {
-    @apply object-cover w-full h-full scale-110 origin-[50%_10%] hover:scale-120 transition-transform duration-300 ease-out cursor-pointer;
+    @apply object-cover w-full h-full scale-110 hover:scale-120 transition-transform duration-300 ease-out cursor-pointer;
     object-position: 50% 10%;
   }
 
@@ -232,7 +232,7 @@ body {
   }
 
   .subscribe {
-    @apply w-full lg:w-1/2 mx-auto text-center flex flex-col gap-8;
+    @apply w-full lg:w-1/2 mx-auto text-center flex flex-col gap-8 md:mb-20;
   }
 
   .navlinks {

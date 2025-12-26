@@ -13,16 +13,16 @@ const ContactUs = () => {
                 <div className="left">
                     <div>
                         <h2 className="text-xl lg:text-3xl">Email Us</h2>
-                        <p className="text-sm lg:text-base underline">indpafume@gmail.com</p>
+                        <p className="text-sm lg:text-base underline">indooparfum.001@gmail.com</p>
                     </div>
                     <div>
                         <h2 className="text-xl lg:text-3xl">Call Us</h2>
                         <p className="text-sm lg:text-base">+62 81799xxxxxxx</p>
                     </div>
-                    <div className="text-sm lg:text-base">
-                        <h2 className="text-xl lg:text-3xl">Email Us</h2>
-                        <p> <i className="ri-arrow-right-long-fill ri-xs"></i> Jl. Teluk Tiram xxxxxx</p>
-                        <p> <i className="ri-arrow-right-long-fill ri-xs"></i> Jl. Kelayan xxxxxx</p>
+                    <div className="text-sm lg:text-base w-5/6">
+                        <h2 className="text-xl lg:text-3xl">Visit Our Store</h2>
+                        <p className="text-xs md:text-sm mb-2"> <i className="ri-arrow-right-long-fill ri-xs"></i> Gg. Tiram 13 Rahmat, Telawang, Kec. Banjarmasin Bar, Kota Banjarmasin, Kalimantan Selatan 70114</p>
+                        <p className="text-xs md:text-sm"> <i className="ri-arrow-right-long-fill ri-xs"></i> Kelayan Dalam, Kec. Banjarmasin Sel, Kota Banjarmasin, Kalimantan Selatan 70242</p>
                     </div>
                     <div>
                         <h2 className="text-xl lg:text-3xl">Business Hours</h2>

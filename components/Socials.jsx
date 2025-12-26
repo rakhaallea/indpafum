@@ -21,9 +21,9 @@ const Socials = () => {
 
                 <div className='flex gap-4 justify-center items-center pb-2'>
                     {
-                        socials.map((social, index) => (
+                        socials.map((social) => (
                             <Link href={social.url} key={social.name}>
-                                <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all ${index === 3 ? "hidden" : null} `}></i>
+                                <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all `}></i>
                             </Link>
                         ))
                     }
