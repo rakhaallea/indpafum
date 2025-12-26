@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
+import logo from "@/public/img/logo.png"
+
 import { listShop, listServices, listDelivery } from "@/constant"
 
 const Footer = () => {
@@ -81,7 +83,12 @@ const Footer = () => {
             </div>
 
             <div className="flex justify-center items-center mt-20">
-                <Image src={"/img/logo.png"} width={250} height={50} alt="logo Indpafume" />
+                <Image
+                    src={logo}
+                    width={250}
+                    height={50}
+                    className="w-auto h-auto"
+                    alt="logo Indpafume" />
             </div>
 
             <div className="absolute top-60 -right-40 w-180 h-180 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
