@@ -1,7 +1,6 @@
 import imgModel from '@/public/img/model.png';
 import imgPafum from '@/public/img/4.png';
 
-
 import Image from 'next/image'
 
 const Whyaura = () => {

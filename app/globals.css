@@ -29,16 +29,6 @@ body {
   /* scroll-behavior: smooth */
 }
 
-/* @layer utilities {
-  .swiper-wrapper {
-    @apply flex;
-  }
-} */
-
-/* @utility overlay-hero {
-  @apply flex flex-col gap-6 md:gap-7 max-w-[500px] lg:h-full text-center font-josefin-sans bg-linear-to-br from-[#9B7E5B] from-55% to-[#D7CABB] px-6 md:px-12 lg:px-16 pt-12 pb-6 md:pt-16 lg:pt-20 lg:[clip-path:polygon(0%_0%, 100%_0%, 80%_100%, 20%_100%)]
-} */
-/* Warna bullet */
 .swiper-pagination-bullet {
   background: rgba(217, 217, 217, 1) !important;
   width: 22px !important;
@@ -80,7 +70,7 @@ body {
   }
 
   .product-body-price {
-    @apply flex gap-4 justify-center md:justify-start;
+    @apply flex flex-col gap-4 justify-center md:justify-start;
   }
 
   .product-body-countdown {

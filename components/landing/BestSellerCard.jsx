@@ -1,8 +1,12 @@
 import Image from "next/image"
 
-import { auraParfum } from "@/constant"
+import { auraParfum, products } from "@/constant"
 
 const BestSeller = () => {
+    const bestSellers = [...products]
+        .sort((a, b) => (b.rating * b.reviewCount) - (a.rating * a.reviewCount))
+        .slice(0, 4);
+
     return (
         <div className="bestSellers" id="bestsellers">
             <div className="text-start lg:text-center">
@@ -13,22 +17,29 @@ const BestSeller = () => {
             <div className="bestSellers-body" >
 
                 {
-                    auraParfum.map((product, index) => (
+                    bestSellers.map((product, index) => (
                         <div className='w-full font-poppins bestSeller-card-body' key={index}>
                             <div className='w-full h-70 overflow-hidden shadow-2xl shadow-slate-500/30'>
                                 <Image
-                                    src={product.img}
+                                    src={product.image}
                                     className='bestSellers-img'
                                     alt={`img-${index}`} />
                             </div>
-                            <h2 className='font-bold'>{product.title}</h2>
+                            <h2 className='font-bold'>{product.name}</h2>
                             <p className='font-light text-xs leading-5'>
-                                {product.desc}
+                                {product.description}
                             </p>
+                            <div>
+                                {product.vibe.map((badge, index) => (
+                                    <span key={index} className="inline-block bg-[#f0f0f0] text-[#333] text-xs font-medium px-2 py-1 rounded-full mr-2">
+                                        {badge}
+                                    </span>
+                                ))}
+                            </div>
                             <button className="btn-primary-outline">
                                 <div
                                     className="p-2 text-sm font-light bg-background hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] rounded-full  duration-300 cursor-pointer transition-all">
-                                    {product.cta}
+                                    view product
                                 </div>
                             </button>
                         </div>
