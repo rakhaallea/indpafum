@@ -61,7 +61,7 @@ const FAQ = () => {
                         ))}
                     </div>
 
-                    <p className='text-center text-[#4C4C4C] font-light'>Setiap parfum di INDPAFUM dirancang untuk menciptakan pengalaman
+                    <p className='text-center px-46 md:px-26 lg:px-0 text-[#4C4C4C] font-light'>Setiap parfum di INDPAFUM dirancang untuk menciptakan pengalaman
                         aroma yang unik. Dari sentuhan floral yang lembut hingga
                         oriental yang bold, temukan wangi yang benar-benar
                         mewakili dirimu.
