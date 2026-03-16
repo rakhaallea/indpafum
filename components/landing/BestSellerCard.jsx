@@ -10,7 +10,7 @@ const BestSeller = () => {
 
     return (
         <div className="bestSellers" id="bestsellers">
-            <div className="text-start md:text-center">
+            <div className="text-center">
                 <h1 className="text-4xl md:text-6xl text-white font-prata">Best Seller</h1>
                 <p className="text-white/55 font-poppins text-sm md:text-base max-w-2xl mx-auto">
                     A scent for every soul, every story
