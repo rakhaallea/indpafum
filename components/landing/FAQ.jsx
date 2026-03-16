@@ -3,7 +3,7 @@
 import { listFaq } from '@/constant'
 import Image from 'next/image'
 import banner from '@/public/img/banner.jpg'
-import imgPafum from '@/public/img/3.png'
+import imgPafum from '@/public/img/3_30ml.png'
 import { useState } from 'react'
 
 const FAQ = () => {
@@ -61,18 +61,21 @@ const FAQ = () => {
                         ))}
                     </div>
 
-                    <p className='text-center text-[#4C4C4C] font-light'>Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry’s standart dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    <p className='text-center text-[#4C4C4C] font-light'>Setiap parfum di INDPAFUM dirancang untuk menciptakan pengalaman
+                        aroma yang unik. Dari sentuhan floral yang lembut hingga
+                        oriental yang bold, temukan wangi yang benar-benar
+                        mewakili dirimu.
                     </p>
 
                     <div className='faq-card'>
-                        <h3>Reachel</h3>
+                        {/* <h3>Reachel</h3> */}
                         <div className='flex gap-2 bg-[#F0DBBD]'>
                             <div className='w-16 h-16 overflow-hidden'>
                                 <Image src={imgPafum} className='w-full h-full object-cover' alt='img-1'></Image>
                             </div>
                             <div className='flex flex-col justify-center items-start pr-6'>
-                                <p className='font-light text-[#4F7974]'>Parfume</p>
-                                <p className='font-bold text-[#4F7974]'>Rp.100.000,00</p>
+                                <p className='font-light text-[#4F7974]'>SCENT BLACK</p>
+                                <p className='font-bold text-[#4F7974]'>Rp.145.000,00</p>
                             </div>
                         </div>
                     </div>

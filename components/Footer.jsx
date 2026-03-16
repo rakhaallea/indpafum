@@ -8,7 +8,7 @@ import { listShop, listServices, listDelivery } from "@/constant"
 const Footer = () => {
     return (
         <div className="footer">
-            <div className="subscribe">
+            {/* <div className="subscribe">
                 <h2 className="text-3xl">Subscribe To Our Newsletter</h2>
                 <div className="flex flex-col md:px-20 lg:px-0 lg:flex-row gap-4 md:gap-6">
                     <input type="text" className="bg-white text-slate-700 ring-0 w-full py-2 md:py-4 px-4 rounded-2xl" placeholder="Enter your email" />
@@ -18,22 +18,23 @@ const Footer = () => {
                         Subscribe
                     </button>
                 </div>
-                {/* <div className='flex gap-4 justify-center items-center pb-2'>
-                    {
-                        socials.map((social) => (
-                            <Link href={social.url} key={social.name}>
-                                <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all`}></i>
-                            </Link>
-                        ))
-                    }
-                </div> */}
-            </div>
+            </div> */}
 
             <div className="navlinks">
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-2xl">INDPAFUME</h1>
+                    {/* <h1 className="text-2xl">INDPAFUME</h1>
+                     */}
+                    <div className="flex justify-center items-center -mt-2">
+                        <Image
+                            src={logo}
+                            width={200}
+                            height={200}
+                            className="w-auto h-auto"
+                            alt="logo Indpafume" />
+                    </div>
                     <p className="text-xs">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        INDPAFUM menghadirkan parfum dengan karakter elegan dan tahan lama,
+                        dirancang untuk menemani setiap momen dan mengekspresikan kepribadianmu.
                     </p>
                     <span className="flex gap-2 items-center">
                         <i className="ri-map-pin-line"></i>

@@ -1,12 +1,10 @@
 import Image from "next/image"
 
-import imgPafum from "@/public/img/3.png"
-
 import { latestUpdates } from "@/constant"
 
 const LatestProduct = () => {
     return (
-        <div className='pt-20 pb-20 relative px-6' id="perfumes">
+        <div className='pt-20 pb-20 relative px-6' id="lattestperfumes">
 
             <div className='pt-20 font-poppins tracking-wider'>
                 <h1 className='text-4xl font-prata text-center mb-4'>Latest from INDPAFUM</h1>
@@ -30,7 +28,7 @@ const LatestProduct = () => {
                                     <button className="w-fit btn-primary-outline font-prata text-lg">
                                         <div
                                             className="py-2 px-6 text-sm font-light bg-background hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] rounded-full  duration-300 cursor-pointer transition-all">
-                                            Learn more
+                                            View More
                                         </div>
                                     </button>
                                 </div>

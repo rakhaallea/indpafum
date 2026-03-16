@@ -1,8 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import imgPafum from "@/public/img/3.png"
-
 import { socials } from "@/constant"
 
 const Socials = () => {
@@ -22,7 +20,7 @@ const Socials = () => {
                 <div className='flex gap-4 justify-center items-center pb-2'>
                     {
                         socials.map((social) => (
-                            <Link href={social.url} key={social.name}>
+                            <Link href={social.url} key={social.name} target="_blank">
                                 <i className={`${social.icon} text-2xl md:text-5xl hover:text-[#D7CABB] duration-150 transition-all `}></i>
                             </Link>
                         ))

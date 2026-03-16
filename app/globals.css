@@ -189,7 +189,7 @@ body {
     Socials
   =============================== */
   .socials-container {
-    @apply md:w-[90%] mx-auto pt-12 rounded-2xl border-[.8px] text-center text-sm font-light font-poppins px-4 flex flex-col gap-6;
+    @apply md:w-[90%] mx-auto pt-10 pb-10 rounded-2xl border-[.8px] text-center text-sm font-light font-poppins px-4 flex flex-col gap-6;
     background: linear-gradient(90deg,
         rgba(255, 255, 255, 0.3),
         rgba(153, 153, 153, 0.02))
@@ -211,7 +211,7 @@ body {
   }
 
   .contactus .body .right {
-    @apply w-full md:w-100 lg:w-180 order-1 md:order-2 mb-8 md:mb-0;
+    @apply w-full md:w-200 lg:w-180 order-1 md:order-2 mb-8 md:mb-0;
   }
 
   /* ===============================

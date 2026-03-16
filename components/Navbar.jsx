@@ -28,8 +28,8 @@ const Navbar = () => {
         <nav className='fixed z-100 w-full px-4 md:px-8 mx-auto py-10 font-josefin-sans'>
             <div className='flex justify-between md:justify-end items-center'>
                 <h1
-                    className='lg:w-full lg:pl-20 md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
-                <div className='flex-center gap-2 md:gap-8'>
+                    className='lg:w-full lg:pl-auto md:mr-auto text-center font-bold tracking-widest text-xl'>INDPAFUM</h1>
+                <div className='flex-center gap-4 md:gap-8'>
                     <Link href={"https://maps.app.goo.gl/4jtuyxEwpEuYrMBw7"} target="_blank" rel="noopener noreferrer">
                         <i className="ri-map-pin-line ri-xl"></i>
                     </Link>

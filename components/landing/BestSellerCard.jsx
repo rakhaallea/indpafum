@@ -1,55 +1,74 @@
 import Image from "next/image"
 
-import { auraParfum, products } from "@/constant"
+import { products } from "@/constant"
+import Link from "next/link"
 
 const BestSeller = () => {
-    const bestSellers = [...products]
-        .sort((a, b) => (b.rating * b.reviewCount) - (a.rating * a.reviewCount))
-        .slice(0, 4);
+    const bestSellers = products
+        .filter((product) => product.isBestSeller === true)
+        .slice(0, 4)
 
     return (
         <div className="bestSellers" id="bestsellers">
-            <div className="text-start lg:text-center">
-                <h1 className="mb-8 text-3xl md:text-5xl font-prata">Best Seller</h1>
-                <p className="font-poppins text-xl md:text-2xl font-light">A scent for every soul, every story</p>
+            <div className="text-start md:text-center">
+                <h1 className="text-4xl md:text-6xl text-white font-prata">Best Seller</h1>
+                <p className="text-white/55 font-poppins text-sm md:text-base max-w-2xl mx-auto">
+                    A scent for every soul, every story
+                </p>
             </div>
 
-            <div className="bestSellers-body" >
+            <div className="bestSellers-body">
+                {bestSellers.map((product) => (
+                    <div className='w-full font-poppins bestSeller-card-body flex flex-col gap-4 group' key={product.id}>
 
-                {
-                    bestSellers.map((product, index) => (
-                        <div className='w-full font-poppins bestSeller-card-body' key={index}>
-                            <div className='w-full h-70 overflow-hidden shadow-2xl shadow-slate-500/30'>
-                                <Image
-                                    src={product.image}
-                                    className='bestSellers-img'
-                                    alt={`img-${index}`} />
-                            </div>
-                            <h2 className='font-bold'>{product.name}</h2>
-                            <p className='font-light text-xs leading-5'>
-                                {product.description}
-                            </p>
-                            <div>
-                                {product.vibe.map((badge, index) => (
-                                    <span key={index} className="inline-block bg-[#f0f0f0] text-[#333] text-xs font-medium px-2 py-1 rounded-full mr-2">
-                                        {badge}
-                                    </span>
-                                ))}
-                            </div>
-                            <button className="btn-primary-outline">
-                                <div
-                                    className="p-2 text-sm font-light bg-background hover:bg-[linear-gradient(90deg,rgba(255,255,255,0.2),rgba(153,153,153,0.1))] rounded-full  duration-300 cursor-pointer transition-all">
-                                    view product
-                                </div>
-                            </button>
+                        {/* Image */}
+                        <div className='relative w-full aspect-4/3 overflow-hidden'>
+                            <Image
+                                src={product.image}
+                                alt={product.name}
+                                fill
+                                className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
+                            />
+
+                            {/* gradient overlay */}
+                            <div className="absolute inset-0 bg-linear-to-t from-black/30 via-transparent to-transparent"></div>
                         </div>
-                    ))
-                }
 
+                        {/* Title */}
+                        <h2 className='font-semibold text-lg tracking-wide'>
+                            {product.name}
+                        </h2>
+
+                        {/* Description */}
+                        <p className='font-light text-sm leading-6 text-white/70 line-clamp-2'>
+                            {product.description}
+                        </p>
+
+                        {/* Tags */}
+                        <div className="flex flex-wrap gap-2">
+                            {product.vibe.map((badge, index) => (
+                                <span
+                                    key={index}
+                                    className="px-3 py-1 text-xs rounded-full bg-white/10 text-white/80 backdrop-blur"
+                                >
+                                    {badge}
+                                </span>
+                            ))}
+                        </div>
+
+                        {/* Button */}
+                        <Link href={product.variants[0].link} target="_blank">
+                            <button className="mt-auto w-fit border border-white/30 rounded-full px-4 py-2 text-sm hover:bg-white/10 transition-all duration-300 cursor-pointer">
+                                View Product
+                            </button>
+                        </Link>
+
+
+                    </div>
+                ))}
             </div>
 
-            <div className="absolute top-20 right-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
-            </div>
+            <div className="absolute top-20 right-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none"></div>
         </div>
     )
 }

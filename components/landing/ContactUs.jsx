@@ -17,7 +17,7 @@ const ContactUs = () => {
                     </div>
                     <div>
                         <h2 className="text-xl lg:text-3xl">Call Us</h2>
-                        <p className="text-sm lg:text-base">+62 81799xxxxxxx</p>
+                        <p className="text-sm lg:text-base">0812-5116-7168</p>
                     </div>
                     <div className="text-sm lg:text-base w-5/6">
                         <h2 className="text-xl lg:text-3xl">Visit Our Store</h2>
