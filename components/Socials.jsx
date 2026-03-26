@@ -6,7 +6,7 @@ import { socials } from "@/constant"
 
 const Socials = () => {
     return (
-        <div className='pt-20 pb-20 relative px-6' id="socials">
+        <section className='pt-20 pb-20 relative px-6 overflow-hidden' id="socials">
             <div
                 className="socials-container">
 
@@ -29,9 +29,9 @@ const Socials = () => {
                 </div>
             </div>
 
-            <div className="absolute top-20 left-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
-            </div>
-        </div>
+            {/* <div className="absolute top-20 left-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
+            </div> */}
+        </section>
     )
 }
 

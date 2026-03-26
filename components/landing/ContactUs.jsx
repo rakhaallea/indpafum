@@ -55,7 +55,7 @@ const ContactUs = () => {
                 </div>
             </div>
 
-            <div className="absolute top-20 -left-40 w-80 h-110 lg:w-120 lg:h-220 rotate-90 rounded-full bg-[rgba(255,255,223,0.08)] -z-10 blur-2xl pointer-events-none">
+            <div className="absolute top-20 -left-40 w-80 h-110 lg:w-140 lg:h-140 rotate-90 rounded-full bg-[rgba(255,255,223,0.08)] -z-10 blur-2xl pointer-events-none">
             </div>
         </section>
     )

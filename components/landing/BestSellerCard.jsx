@@ -71,7 +71,7 @@ const BestSeller = () => {
                 ))}
             </div>
 
-            <div className="absolute top-20 right-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none"></div>
+            <div className="absolute top-20 right-0 w-140 h-140 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none"></div>
         </section>
     )
 }
