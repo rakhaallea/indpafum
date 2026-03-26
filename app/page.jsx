@@ -9,6 +9,7 @@ import FAQ from '@/components/landing/FAQ';
 import Socials from '@/components/Socials';
 import ContactUs from '@/components/landing/ContactUs';
 import Footer from '@/components/Footer';
+import ScrollToTop from '@/components/ScrollToTop';
 
 // import gsap from "gsap"
 // import { ScrollTrigger, SplitText } from "gsap/all"
@@ -29,6 +30,7 @@ export default function Home() {
       <Socials />
       <ContactUs />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

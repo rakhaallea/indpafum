@@ -1,16 +1,16 @@
-import parfum1_15 from "@/public/img/1_15ml.png";
+import parfum1_13 from "@/public/img/1_13ml.png";
 import parfum1_30 from "@/public/img/1_30ml.png";
 import parfum1_50 from "@/public/img/1_50ml.png";
 
-import parfum2_15 from "@/public/img/2_15ml.png";
+import parfum2_13 from "@/public/img/2_13ml.png";
 import parfum2_30 from "@/public/img/2_30ml.png";
 import parfum2_50 from "@/public/img/2_50ml.png";
 
-import parfum3_15 from "@/public/img/3_15ml.png";
+import parfum3_13 from "@/public/img/3_13ml.png";
 import parfum3_30 from "@/public/img/3_30ml.png";
 import parfum3_50 from "@/public/img/3_50ml.png";
 
-import parfum4_15_cust from "@/public/img/4_15ml_custom.png";
+import parfum4_13_cust from "@/public/img/4_13ml_custom.png";
 import parfum4_30_cust from "@/public/img/4_30ml_custom.png";
 import parfum4_50_cust from "@/public/img/4_50ml_custom.png";
 import parfum6 from '@/public/img/parfum-bgblack.jpeg';
@@ -65,12 +65,13 @@ const products = [
         vibe: ["Sweet", "Warm", "Dark", "Bold"],
         bestFor: ["Malam", "Acara resmi", "Cuaca sejuk"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum1_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum1_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum1_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum1_13, },
+            { size: "30ml", price: 145000, image: parfum1_30, },
+            { size: "50ml", price: 225000, image: parfum1_50, },
         ],
         isBestSeller: true,
         heroTag: ["Oriental", "Woody", "Spicy"],
+        link: "#",
     },
 
     {
@@ -87,12 +88,13 @@ const products = [
         vibe: ["Dark Sweet", "Luxury", "Intense"],
         bestFor: ["Malam", "Date night", "Acara mewah"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Amber", "Caramel", "Vanilla"],
+        link: "#",
     },
 
     {
@@ -109,12 +111,13 @@ const products = [
         vibe: ["Sweet", "Romantic", "Dark Elegance"],
         bestFor: ["Malam", "Acara istimewa", "Sensual"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum3_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum3_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum3_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum3_13, },
+            { size: "30ml", price: 145000, image: parfum3_30, },
+            { size: "50ml", price: 225000, image: parfum3_50, },
         ],
         isBestSeller: false,
         heroTag: ["Rose", "Floral", "Amber"],
+        link: "https://shopee.co.id/INDPAFUM-Uniquee-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.8899177184?extraParams=%7B%22display_model_id%22%3A195724144562%2C%22model_selection_logic%22%3A3%7D",
     },
 
     {
@@ -131,12 +134,13 @@ const products = [
         vibe: ["Sweet", "Creamy", "Warm", "Long-lasting"],
         bestFor: ["Sore/Malam", "Dinner", "Ruangan AC"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: true,
         heroTag: ["Creamy", "Sweet", "Sandalwood"],
+        link: "https://shopee.co.id/INDPAFUM-Ivieor-monic-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.14189850893?extraParams=%7B%22display_model_id%22%3A186855120217%2C%22model_selection_logic%22%3A3%7D&sp_atk=ef978a0d-ffb8-459b-a3c0-c6700679a0b6&xptdk=ef978a0d-ffb8-459b-a3c0-c6700679a0b6",
     },
 
     {
@@ -153,12 +157,13 @@ const products = [
         vibe: ["Sweet", "Bold", "Clean"],
         bestFor: ["Siang/Malam", "Meeting", "Event semi-formal"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum1_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum1_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum1_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum1_13, },
+            { size: "30ml", price: 145000, image: parfum1_30, },
+            { size: "50ml", price: 225000, image: parfum1_50, },
         ],
         isBestSeller: false,
         heroTag: ["Vanilla", "Musk", "Woody"],
+        link: "https://shopee.co.id/INDPAFUM-The-Parfum-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.11193818649?extraParams=%7B%22display_model_id%22%3A223709878070%2C%22model_selection_logic%22%3A3%7D&sp_atk=505837e1-098a-4aec-b25e-03959e76121d&xptdk=505837e1-098a-4aec-b25e-03959e76121d",
     },
 
     {
@@ -175,12 +180,13 @@ const products = [
         vibe: ["Sweet", "Bold", "Elegant Feminine"],
         bestFor: ["Siang/Malam", "Kencan", "Acara sosial"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: true,
         heroTag: ["Floral", "Sweet", "Modern"],
+        link: "https://shopee.co.id/INDPAFUM-The-Parfum-Femme-Parfum-Wanita-High-Concentration-Premium-Long-Lasting-i.742420757.16376786501?extraParams=%7B%22display_model_id%22%3A242473606832%2C%22model_selection_logic%22%3A3%7D&sp_atk=b327297b-b0c8-461a-930c-dcb4ee80ee72&xptdk=b327297b-b0c8-461a-930c-dcb4ee80ee72",
     },
 
     {
@@ -197,12 +203,13 @@ const products = [
         vibe: ["Soft Fresh", "Sweet", "Clean"],
         bestFor: ["Siang/Sore", "Kantor", "Jalan santai"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Fresh", "Citrus", "Musk"],
+        link: "#",
     },
 
     {
@@ -219,12 +226,13 @@ const products = [
         vibe: ["Fresh Clean", "Refined Sweet", "Neat"],
         bestFor: ["Siang", "Profesional", "Aktivitas harian"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Ozonic", "White Floral", "Clean"],
+        link: "#",
     },
 
     {
@@ -241,12 +249,13 @@ const products = [
         vibe: ["Fresh", "Cool", "Sleek"],
         bestFor: ["Siang", "Cuaca panas", "Kantor/Kuliah"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum1_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum1_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum1_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum1_13, },
+            { size: "30ml", price: 145000, image: parfum1_30, },
+            { size: "50ml", price: 225000, image: parfum1_50, },
         ],
         isBestSeller: false,
         heroTag: ["Water", "Musk", "Cool"],
+        link: "#",
     },
 
     {
@@ -263,12 +272,13 @@ const products = [
         vibe: ["Fresh Cool", "Creamy Sweet", "Chill"],
         bestFor: ["Siang/Sore santai", "Hangout café"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum1_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum1_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum1_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum1_13, },
+            { size: "30ml", price: 145000, image: parfum1_30, },
+            { size: "50ml", price: 225000, image: parfum1_50, },
         ],
         isBestSeller: false,
         heroTag: ["Ozonic", "Citrus", "Almond"],
+        link: "#",
     },
 
     {
@@ -285,12 +295,13 @@ const products = [
         vibe: ["Sweet", "Soft", "Dreamy"],
         bestFor: ["Siang/Sore", "Brunch", "Date santai"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Praline", "White Floral", "Musk"],
+        link: "https://shopee.co.id/INDPAFUM-Scndloust-x-Romance-Wish-Parfum-Wanita-High-Concentration-Premium-Long-Lasting-i.742420757.43706800836?extraParams=%7B%22display_model_id%22%3A285573397276%2C%22model_selection_logic%22%3A3%7D&sp_atk=3a701e17-3cc6-4831-bf2d-e5b1ffa26ded&xptdk=3a701e17-3cc6-4831-bf2d-e5b1ffa26ded",
     },
 
     {
@@ -307,12 +318,13 @@ const products = [
         vibe: ["Soft", "Airy", "Sweet"],
         bestFor: ["Siang", "Cuaca cerah", "Weekend vibes"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Soft", "Airy", "Musk"],
+        link: "#",
     },
 
     {
@@ -329,12 +341,13 @@ const products = [
         vibe: ["Sweet Floral", "Clean", "Elegant"],
         bestFor: ["Siang/Sore", "Meeting", "Acara keluarga"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Peony", "Lily", "Amber"],
+        link: "#",
     },
 
     {
@@ -351,12 +364,13 @@ const products = [
         vibe: ["Creamy", "Cool", "Balanced"],
         bestFor: ["Seharian", "Aktivitas rutin", "Santai"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum1_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum1_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum1_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum1_13, },
+            { size: "30ml", price: 145000, image: parfum1_30, },
+            { size: "50ml", price: 225000, image: parfum1_50, },
         ],
         isBestSeller: false,
         heroTag: ["Tonka", "Musk", "Cool"],
+        link: "#",
     },
 
     {
@@ -373,12 +387,13 @@ const products = [
         vibe: ["Fresh Bold", "Clean", "Smooth"],
         bestFor: ["Siang/Sore", "Kerja", "Casual-formal"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Herbal", "Citrus", "Cedar"],
+        link: "https://shopee.co.id/INDPAFUM-Parfum-Custom-By-Request-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.24890205982?extraParams=%7B%22display_model_id%22%3A233677886362%2C%22model_selection_logic%22%3A3%7D",
     },
 
     {
@@ -395,12 +410,13 @@ const products = [
         vibe: ["Fresh Power", "Cool", "Sharp"],
         bestFor: ["Siang", "Olahraga", "Cuaca panas"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: false,
         heroTag: ["Citrus", "Marine", "Fresh"],
+        link: "#",
     },
 
     {
@@ -417,12 +433,13 @@ const products = [
         vibe: ["Fresh", "Sweet Floral", "Soft Glam"],
         bestFor: ["Pagi/Siang", "Cerah", "Anggun santai"],
         variants: [
-            { size: "13ml", price: 65000, image: parfum2_15, link: "#" },
-            { size: "30ml", price: 145000, image: parfum2_30, link: "#" },
-            { size: "50ml", price: 225000, image: parfum2_50, link: "#" },
+            { size: "13ml", price: 65000, image: parfum2_13, },
+            { size: "30ml", price: 145000, image: parfum2_30, },
+            { size: "50ml", price: 225000, image: parfum2_50, },
         ],
         isBestSeller: true,
         heroTag: ["Freesia", "Rose", "Musk"],
+        link: "https://shopee.co.id/INDPAFUM-Aurora-Parfum-Wanita-High-Concentration-Premium-Long-Lasting-i.742420757.14877738424?extraParams=%7B%22display_model_id%22%3A168664250127%2C%22model_selection_logic%22%3A3%7D&sp_atk=b6bae0c2-2c37-41db-b718-e95c8078095c&xptdk=b6bae0c2-2c37-41db-b718-e95c8078095c",
     },
     {
         id: 18,
@@ -438,12 +455,13 @@ const products = [
         vibe: ["Personal", "Exclusive", "Bespoke", "Signature"],
         bestFor: ["Semua acara", "Hadiah spesial", "Identity signature"],
         variants: [
-            { size: "15ml", price: 65000, image: parfum4_15_cust, link: "#" },
-            { size: "30ml", price: 150000, image: parfum4_30_cust, link: "#" },
-            { size: "50ml", price: 225000, image: parfum4_50_cust, link: "#" },
+            { size: "13ml", price: 65000, image: parfum4_13_cust, },
+            { size: "30ml", price: 150000, image: parfum4_30_cust, },
+            { size: "50ml", price: 225000, image: parfum4_50_cust, },
         ],
         isBestSeller: false,
         heroTag: ["Bespoke", "Signature", "Exclusive"],
+        link: "https://shopee.co.id/INDPAFUM-Parfum-Custom-By-Request-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.24890205982?extraParams=%7B%22display_model_id%22%3A233677886362%2C%22model_selection_logic%22%3A3%7D",
     },
     {
         id: 19,
@@ -459,12 +477,13 @@ const products = [
         vibe: ["Personal", "Exclusive", "Bespoke", "Signature"],
         bestFor: ["Semua acara", "Hadiah spesial", "Identity signature"],
         variants: [
-            { size: "15ml", price: 65000, image: parfum4_15_cust, link: "#" },
-            { size: "30ml", price: 70000, image: parfum4_30_cust, link: "#" },
-            { size: "50ml", price: 100000, image: parfum4_50_cust, link: "#" },
+            { size: "13ml", price: 30000, image: parfum4_13_cust, },
+            { size: "30ml", price: 70000, image: parfum4_30_cust, },
+            { size: "50ml", price: 100000, image: parfum4_50_cust, },
         ],
         isBestSeller: false,
         heroTag: ["Bespoke", "Signature", "Exclusive"],
+        link: "https://shopee.co.id/INDPAFUM-Produk-Biasa-Parfum-Unisex-High-Concentration-Premium-Long-Lasting-i.742420757.27222239673?extraParams=%7B%22display_model_id%22%3A242378866742%2C%22model_selection_logic%22%3A2%7D",
     },
 ];
 
@@ -651,7 +670,7 @@ const products = [
 //         cta: 'Browse Men’s Scents',
 //     },
 //     {
-//         img: parfum1_15,
+//         img: parfum1_13,
 //         title: 'Moonlit Flour - Eau de Parfum',
 //         desc: 'Confident. Grounded. Magnetic.Explore deep, woody, and spicy compositionscrafted  to leave a bold, lasting impression.',
 //         cta: 'Browse Men’s Scents',
@@ -663,7 +682,7 @@ const products = [
 //         cta: 'Browse Men’s Scents',
 //     },
 //     {
-//         img: parfum1_15,
+//         img: parfum1_13,
 //         title: 'Moonlit Flour - Eau de Parfum',
 //         desc: 'Confident. Grounded. Magnetic.Explore deep, woody, and spicy compositionscrafted  to leave a bold, lasting impression.',
 //         cta: 'Browse Men’s Scents',
@@ -796,14 +815,14 @@ const latestUpdates = [
         title: 'The Art of Layering Fragrances',
         desc: 'Discover the secrets of combining different scents to create your unique signature frafrance that evolves throughout the day.',
         cta: 'Learn more',
-        img: parfum1_15,
+        img: parfum1_13,
         date: 'Oktober 15, 2025',
     },
     {
         title: 'The Art of Layering Fragrances',
         desc: 'Discover the secrets of combining different scents to create your unique signature frafrance that evolves throughout the day.',
         cta: 'Learn more',
-        img: parfum2_15,
+        img: parfum2_13,
         date: 'Oktober 15, 2025',
     }
 ]

@@ -29,6 +29,7 @@ const BestSeller = () => {
                                 src={product.image}
                                 alt={`${product.name} parfum ${product.type} ukuran ${product.variants[0].size}`}
                                 fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
                             />
 
@@ -59,7 +60,7 @@ const BestSeller = () => {
                         </div>
 
                         {/* Button */}
-                        <Link href={product.variants[0].link} target="_blank">
+                        <Link href={product.link} target="_blank">
                             <button className="mt-auto w-fit border border-white/30 rounded-full px-4 py-2 text-sm hover:bg-white/10 transition-all duration-300 cursor-pointer">
                                 View Product
                             </button>

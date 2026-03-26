@@ -11,6 +11,7 @@ import 'swiper/css/free-mode'
 
 import { useState, useMemo } from 'react'
 import formatRupiah from "@/lib/formatRupiah"
+import Link from 'next/link'
 
 function CategoryTabs({ activeTab, onChange }) {
     return (
@@ -58,6 +59,7 @@ function CategoryTabs({ activeTab, onChange }) {
 }
 
 function ProductCard({ item }) {
+
     return (
         <div className='group h-full bg-white/0.03 backdrop-blur-sm overflow-hidden  transition-all duration-300 hover:border-white/20 hover:bg-white/0.05'>
             <div className='relative w-full aspect-4/3 overflow-hidden'>
@@ -65,6 +67,7 @@ function ProductCard({ item }) {
                     src={item.image}
                     alt={`${item.name} parfum ${item.type} ukuran ${item.size}`}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
                     className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
                 />
             </div>
@@ -112,11 +115,9 @@ function ProductCard({ item }) {
                             {formatRupiah(item.price)}
                         </p>
                     </div>
-                    <div className='space-y-1'>
-                        <a href={`#`} className='w-full py-2 px-6 rounded-full border transition-all duration-300 text-sm md:text-md hover:border-white/50 bg-white/10 hover:text-white border-white/20 text-white/70'>
-                            view product
-                        </a>
-                    </div>
+                    <Link href={item.link} target="_blank" className='space-y-1 w-full md:w-auto py-2 px-6 rounded-full border transition-all duration-300 text-sm md:text-md hover:border-white/50 bg-white/10 hover:text-white border-white/20 text-white/70 cursor-pointer'>
+                        view product
+                    </Link>
 
 
                 </div>
@@ -154,6 +155,7 @@ const AllProduct = () => {
                 size: variant.size,
                 price: variant.price,
                 image: variant.image || product.image,
+                link: product.link,
             }))
         )
     }, [activeTab])
