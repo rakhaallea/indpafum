@@ -1,3 +1,5 @@
+
+
 import Image from "next/image"
 
 import { products } from "@/constant"
@@ -9,11 +11,11 @@ const BestSeller = () => {
         .slice(0, 4)
 
     return (
-        <div className="bestSellers" id="bestsellers">
+        <section className="bestSellers overflow-hidden" id="bestsellers">
             <div className="text-center">
-                <h1 className="text-4xl md:text-6xl text-white font-prata">Best Seller</h1>
+                <h2 className="text-4xl md:text-6xl text-white font-prata">Best Seller</h2>
                 <p className="text-white/55 font-poppins text-sm md:text-base max-w-2xl mx-auto">
-                    A scent for every soul, every story
+                    Aroma terpilih dengan karakter paling ikonik dan paling disukai.
                 </p>
             </div>
 
@@ -25,7 +27,7 @@ const BestSeller = () => {
                         <div className='relative w-full aspect-4/3 overflow-hidden'>
                             <Image
                                 src={product.image}
-                                alt={product.name}
+                                alt={`${product.name} parfum ${product.type} ukuran ${product.variants[0].size}`}
                                 fill
                                 className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
                             />
@@ -69,7 +71,7 @@ const BestSeller = () => {
             </div>
 
             <div className="absolute top-20 right-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none"></div>
-        </div>
+        </section>
     )
 }
 

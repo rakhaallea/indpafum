@@ -1,13 +1,11 @@
-import Image from "next/image"
 
-import imgMap from "@/public/img/google-map.png"
 
 import { openingHours } from "@/constant"
 
 const ContactUs = () => {
     return (
-        <div className="contactus" id="contactus">
-            <h1 className="mb-14 text-center text-3xl lg:text-5xl">Contact US</h1>
+        <section className="contactus overflow-hidden" id="contactus">
+            <h2 className="mb-14 text-center text-3xl lg:text-5xl">Contact US</h2>
 
             <div className="body">
                 <div className="left">
@@ -46,7 +44,7 @@ const ContactUs = () => {
                 </div>
                 <div className="right">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d248.94102504437666!2d114.5957578!3d-3.3362411!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421004250d3d1%3A0x6bb3c2c98bb9ee05!2sINDPAFUM%20STORE%20KELAYAN!5e0!3m2!1sid!2sid!4v1766648322910!5m2!1sid!2sid"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991.539034986878!2d114.5832008144333!3d-3.330889638882879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421732d3f6eb5%3A0x232688daf21bc8d9!2sINDPAFUM!5e0!3m2!1sid!2sid!4v1774101235146!5m2!1sid!2sid"
                         frameBorder="0"
                         width="100%"
                         height={500}
@@ -59,7 +57,7 @@ const ContactUs = () => {
 
             <div className="absolute top-20 -left-40 w-80 h-110 lg:w-120 lg:h-220 rotate-90 rounded-full bg-[rgba(255,255,223,0.08)] -z-10 blur-2xl pointer-events-none">
             </div>
-        </div>
+        </section>
     )
 }
 

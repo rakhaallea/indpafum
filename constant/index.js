@@ -165,7 +165,7 @@ const products = [
         id: 6,
         slug: "the-parfume-femme",
         name: "THE PARFUME FEMME",
-        image: parfum2_30,
+        image: parfum2_50,
         category: "Elegant",
         type: "spicy",
         gender: "Feminine (Modern)",
@@ -407,7 +407,7 @@ const products = [
         id: 17,
         slug: "aurora-scent",
         name: "AURORA SCENT",
-        image: parfum2_30,
+        image: parfum1_50,
         category: "Elegant",
         type: "floral",
         gender: "Unisex (Feminine)",
@@ -812,7 +812,7 @@ const socials = [
     {
         name: "Instagram",
         icon: "ri-instagram-line",
-        url: "https://www.instagram.com/indpafum.store?igsh=MTAyOWRmNjFtNnk4aw%3D%3D",
+        url: "https://www.instagram.com/indpafum.store",
     },
     {
         name: "Shoppe",

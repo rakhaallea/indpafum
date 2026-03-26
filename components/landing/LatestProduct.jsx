@@ -1,14 +1,16 @@
+
+
 import Image from "next/image"
 
 import { latestUpdates } from "@/constant"
 
 const LatestProduct = () => {
     return (
-        <div className='pt-20 pb-20 relative px-6' id="lattestperfumes">
+        <section className='pt-20 pb-20 relative px-6 overflow-hidden' id="lattestperfumes">
 
             <div className='pt-20 font-poppins tracking-wider'>
-                <h1 className='text-4xl font-prata text-center mb-4'>Latest from INDPAFUM</h1>
-                <p className='text-center'>Discover the stories behind our scents and the art of parfumery</p>
+                <h2 className='text-4xl font-prata text-center mb-4'>Latest from INDPAFUM</h2>
+                <p className='text-center'>Eksplorasi aroma terbaru dengan sentuhan modern dan karakter yang unik.</p>
 
                 <div className='latestProduct-body'>
                     {
@@ -17,7 +19,7 @@ const LatestProduct = () => {
                                 <div className="w-full md:w-[85%] h-70 overflow-hidden shadow-2xl shadow-slate-500/30">
                                     <Image
                                         src={card.img}
-                                        alt="img-1"
+                                        alt={`${card.title} parfum ${card.type} ukuran ${card.size}`}
                                         className="latestProduct-img"
                                     />
                                 </div>
@@ -40,7 +42,7 @@ const LatestProduct = () => {
 
             <div className="absolute top-20 left-0 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] -z-10 blur-2xl pointer-events-none">
             </div>
-        </div>
+        </section>
     )
 }
 

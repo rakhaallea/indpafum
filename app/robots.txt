@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: https://indpafum.co.id/sitemap.xml

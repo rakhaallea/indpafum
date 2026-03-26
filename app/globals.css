@@ -29,6 +29,9 @@ body {
   /* scroll-behavior: smooth */
 }
 
+.section-anchor {
+  scroll-margin-top: 120px;
+}
 .swiper-pagination-bullet {
   background: rgba(217, 217, 217, 1) !important;
   width: 22px !important;

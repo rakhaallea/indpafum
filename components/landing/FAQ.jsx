@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import { listFaq } from '@/constant'
 import Image from 'next/image'
@@ -14,8 +14,8 @@ const FAQ = () => {
     };
 
     return (
-        <div className='pt-60 md:pt-20 pb-20 relative' id='faq'>
-            <h1 className='text-6xl font-port-lligat-slab mb-12 text-center'>FAQs</h1>
+        <section className='pt-60 md:pt-20 pb-20 relative overflow-hidden' id='faq'>
+            <h2 className='text-6xl font-port-lligat-slab mb-12 text-center'>FAQs</h2>
 
             <div className='faq-body'>
 
@@ -54,7 +54,7 @@ const FAQ = () => {
                 </div>
 
                 <div className="banner-faq">
-                    <h1 className='text-4xl font-prata text-center'>Aura for Everyone</h1>
+                    <h3 className='text-4xl font-prata text-center'>Aura for Everyone</h3>
                     <div className="text-yellow-300 text-center">
                         {[...Array(5)].map((_, i) => (
                             <i key={i} className="ri-star-fill"></i>
@@ -71,7 +71,10 @@ const FAQ = () => {
                         {/* <h3>Reachel</h3> */}
                         <div className='flex gap-2 bg-[#F0DBBD]'>
                             <div className='w-16 h-16 overflow-hidden'>
-                                <Image src={imgPafum} className='w-full h-full object-cover' alt='img-1'></Image>
+                                <Image src={imgPafum}
+                                    className='w-full h-full object-cover'
+                                    alt={`${imgPafum} parfum banner`}>
+                                </Image>
                             </div>
                             <div className='flex flex-col justify-center items-start pr-6'>
                                 <p className='font-light text-[#4F7974]'>SCENT BLACK</p>
@@ -87,7 +90,7 @@ const FAQ = () => {
 
             <div className="absolute top-60 -right-40 w-120 h-120 -rotate-45 rounded-full bg-[rgba(255,255,223,0.07)] -z-10 blur-2xl pointer-events-none">
             </div>
-        </div>
+        </section>
     )
 }
 

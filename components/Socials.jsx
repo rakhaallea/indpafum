@@ -1,4 +1,5 @@
-import Image from "next/image"
+
+
 import Link from "next/link"
 
 import { socials } from "@/constant"
@@ -9,11 +10,11 @@ const Socials = () => {
             <div
                 className="socials-container">
 
-                <h1 className='text-2xl md:text-5xl font-prata'>Follow, Share & Be Seen</h1>
+                <h2 className='text-2xl md:text-5xl font-prata'>Follow, Share & Be Seen</h2>
                 <div className='flex flex-col gap-2 tracking-widest'>
-                    <p className='text-sm md:text-xl font-medium'>Join the Aurafume Experience - your story deserves the spotlight</p>
-                    <p className='font-light text-xs md:text-lg'>We love how you wear <span className='font-bold'>Aurafume</span>.<br />
-                        Tag us in your reels and stories, and we’ll repost and showcase your vibe with the <br /> <span className='font-bold'>Aurafume</span> comunity.
+                    <p className='text-sm hidden md:block md:text-xl font-medium'>Tunjukkan vibe kamu bersama INDPAFUM.</p>
+                    <p className='font-light text-xs md:text-lg md:px-24'>Tunjukkan gaya Anda melalui <span className='font-bold'>INDPAFUM.</span>
+                        Tag kami di reels dan stories, dan biarkan karakter Anda menginspirasi komunitas kami.
                     </p>
                 </div>
 

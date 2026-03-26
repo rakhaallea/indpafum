@@ -1,3 +1,5 @@
+
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,7 +9,7 @@ import { listShop, listServices, listDelivery } from "@/constant"
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <div className="footer overflow-hidden">
             {/* <div className="subscribe">
                 <h2 className="text-3xl">Subscribe To Our Newsletter</h2>
                 <div className="flex flex-col md:px-20 lg:px-0 lg:flex-row gap-4 md:gap-6">
@@ -48,7 +50,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col gap-4 ">
-                    <h1 className="text-2xl">Shop</h1>
+                    <h4 className="text-2xl">Shop</h4>
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listShop.map((shop) => (
@@ -59,7 +61,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-2xl">Customer Services</h1>
+                    <h4 className="text-2xl">Customer Services</h4>
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listServices.map((services, index) => (
@@ -70,7 +72,7 @@ const Footer = () => {
                 </div>
 
                 <div className="flex flex-col gap-4">
-                    <h1 className="text-2xl">Help</h1>
+                    <h4 className="text-2xl">Help</h4>
                     <ul className="text-sm flex flex-col gap-2">
                         {
                             listDelivery.map((delivery) => (

@@ -1,3 +1,5 @@
+
+
 import imgModel from '@/public/img/model.png';
 import imgPafum from '@/public/img/3_30ml.png';
 
@@ -5,10 +7,10 @@ import Image from 'next/image'
 
 const Whyaura = () => {
     return (
-        <div className='whyaura' id='whyaura'>
+        <section className='whyaura overflow-hidden' id='whyaura'>
 
             <div className='whyaura-text-content'>
-                <h1 className='text-4xl lg:text-5xl font-prata'>Why You Need Aura</h1>
+                <h2 className='text-4xl lg:text-5xl font-prata'>Why You Need Aura</h2>
                 <div>
                     <h3 className='font-poppins text-xl lg:text-2xl font-semibold mb-2'>Because Your presence deserves a signatture</h3>
                     <p className='font-pt-mono text-sm lg:text-2xl'>Your scent us the silent introduction you carry into every room - a trace of emotion, confidence, and memory. At Auralume, we believe every soul has a scent, a story, an aura. Wearing the right fragrance isn’t just about smelling good - it’s about feeling seen, felt, and remembered.
@@ -37,7 +39,7 @@ const Whyaura = () => {
             <div className="absolute top-60 right-20 w-190 h-190 rounded-full bg-[rgba(255,255,223,0.06)] blur-2xl pointer-events-none">
             </div>
 
-        </div>
+        </section>
     )
 }
 

@@ -16,8 +16,9 @@ import 'swiper/css/free-mode'
 const Hero = () => {
 
     return (
-        <div className='pt-20 md:pt-35 lg:pt-45'>
-            <div className="w-full" id='home'>
+        <section id="home"
+            className="scroll-mt-[100px] pt-20 md:pt-35 lg:pt-45 overflow-hidden">
+            <div className="w-full ">
 
                 <Swiper
                     slidesPerView={1}
@@ -41,7 +42,7 @@ const Hero = () => {
                             <div className='mb-12 h-[300px] md:h-[500px] lg:h-[700px]'>
                                 <Image
                                     src={img}
-                                    alt={`hero-${index}`}
+                                    alt={`${img} parfum banner-${index}`}
                                     className='w-full h-full object-cover'
                                 />
                             </div>
@@ -51,7 +52,7 @@ const Hero = () => {
                 </Swiper>
 
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -1,4 +1,4 @@
-'use client'
+"use client"
 
 import Image from 'next/image'
 import { products, buttonBestSellers } from '@/constant'
@@ -63,7 +63,7 @@ function ProductCard({ item }) {
             <div className='relative w-full aspect-4/3 overflow-hidden'>
                 <Image
                     src={item.image}
-                    alt={`${item.name}-${item.size}`}
+                    alt={`${item.name} parfum ${item.type} ukuran ${item.size}`}
                     fill
                     className='object-cover object-center transition-transform duration-500 group-hover:scale-105'
                 />
@@ -164,11 +164,11 @@ const AllProduct = () => {
             id='shopAll'
         >
             <div className='shopall text-center flex flex-col gap-3'>
-                <h1 className='text-4xl md:text-6xl text-white font-prata'>
+                <h2 className='text-4xl md:text-6xl text-white font-prata'>
                     Shop All
-                </h1>
+                </h2>
                 <p className='text-white/55 font-poppins text-sm md:text-base max-w-2xl mx-auto'>
-                    Discover every scent personality — from soft floral elegance to bold oriental depth.
+                    Koleksi lengkap dengan karakter aroma yang dirancang untuk setiap momen dan kepribadian.
                 </p>
             </div>
 
