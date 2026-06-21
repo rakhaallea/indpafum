@@ -4,7 +4,7 @@ import Link from "next/link"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { navLinks } from "@/constant"
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useGSAP } from "@gsap/react"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -12,10 +12,31 @@ gsap.registerPlugin(ScrollTrigger)
 const Navbar = () => {
     const [isActive, setIsActive] = useState(false)
     const [activeLink, setActiveLink] = useState("#home")
+    
+    // 1. Buat referensi ke elemen nav utama
+    const navRef = useRef(null)
+
+    // 2. Gunakan useEffect untuk mendeteksi klik di luar navbar
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            // Jika menu aktif dan elemen yang diklik bukan bagian dari navbar, tutup menu
+            if (isActive && navRef.current && !navRef.current.contains(event.target)) {
+                setIsActive(false)
+            }
+        }
+
+        // Tambahkan event listener saat komponen di-mount
+        document.addEventListener("mousedown", handleClickOutside)
+        
+        // Bersihkan event listener saat komponen di-unmount
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside)
+        }
+    }, [isActive])
 
     useGSAP(() => {
         gsap.fromTo(
-            "nav",
+            navRef.current, // Menggunakan ref agar selektor GSAP lebih presisi
             {
                 backgroundColor: "rgba(37, 39, 38, 0)",
                 backdropFilter: "blur(0px)",
@@ -32,10 +53,11 @@ const Navbar = () => {
                 },
             }
         )
-    })
+    }, { scope: navRef }) // Batasi cakupan animasi di dalam ref saja
 
     return (
-        <nav className='fixed top-0 left-0 z-50 w-full px-4 md:px-8 py-6 md:py-8 font-josefin-sans'>
+        // Pasang navRef di sini
+        <nav ref={navRef} className='fixed top-0 left-0 z-50 w-full px-4 md:px-8 py-6 md:py-8 font-josefin-sans'>
             <div className='flex justify-between md:justify-end items-center'>
                 <h1 className='lg:w-full md:mr-auto text-center font-bold tracking-widest text-xl'>
                     INDPAFUM
@@ -57,19 +79,20 @@ const Navbar = () => {
             </div>
 
             <ul
-                className={`absolute top-24 right-4 lg:static z-40 flex-col gap-4 lg:flex-row lg:flex justify-between items-center w-1/2 mx-auto py-6 tracking-widest capitalize bg-[#252726] lg:bg-transparent lg:translate-y-0 transition-all duration-300 ease-in-out ${!isActive
-                    ? "opacity-0 pointer-events-none translate-x-40 lg:opacity-100 lg:pointer-events-auto lg:translate-x-0"
-                    : "opacity-100 translate-x-0"
-                    }`}
+                className={`absolute top-24 right-4 lg:static z-40 flex-col gap-4 lg:flex-row lg:flex justify-between items-center w-1/2 mx-auto py-6 tracking-widest capitalize bg-[#252726] lg:bg-transparent lg:translate-y-0 transition-all duration-300 ease-in-out ${
+                    !isActive
+                        ? "opacity-0 pointer-events-none translate-x-40 lg:opacity-100 lg:pointer-events-auto lg:translate-x-0"
+                        : "opacity-100 translate-x-0"
+                }`}
             >
                 {navLinks.map((nav) => (
                     <li
                         key={nav.id}
-                        className={`px-6 py-2 lg:px-0 lg:py-0 transition-all
-        ${activeLink === nav.id
+                        className={`px-6 py-2 lg:px-0 lg:py-0 transition-all ${
+                            activeLink === nav.id
                                 ? "text-[#9B7E5B] font-semibold"
                                 : "hover:bg-[#9B7E5B] lg:hover:bg-transparent lg:hover:text-[#9B7E5B]"
-                            }`}
+                        }`}
                     >
                         <Link
                             href={nav.id}
