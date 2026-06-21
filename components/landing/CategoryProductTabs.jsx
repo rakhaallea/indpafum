@@ -59,10 +59,12 @@ function CategoryTabs({ activeTab, onChange }) {
 }
 
 function ProductCard({ item }) {
-
     return (
-        <div className='group h-full bg-white/0.03 backdrop-blur-sm overflow-hidden  transition-all duration-300 hover:border-white/20 hover:bg-white/0.05'>
-            <div className='relative w-full aspect-4/3 overflow-hidden'>
+        // Ditambahkan h-full flex flex-col agar tingginya seragam mengikuti slide Swiper
+        <div className='group h-full flex flex-col bg-white/5 backdrop-blur-sm overflow-hidden transition-all duration-300 hover:border-white/20 hover:bg-white/10 border border-white/5 rounded-2xl'>
+            
+            {/* Image Container */}
+            <div className='relative w-full aspect-[4/3] overflow-hidden bg-white/5'>
                 <Image
                     src={item.image}
                     alt={`${item.name} parfum ${item.type} ukuran ${item.size}`}
@@ -72,21 +74,25 @@ function ProductCard({ item }) {
                 />
             </div>
 
-            <div className='p-4 md:py-5 md:px-0 flex flex-col gap-4 min-h-320px'>
+            {/* Content Container - menggunakan flex-1 dan flex-col */}
+            <div className='p-4 md:p-5 flex flex-col flex-1 gap-4'>
+                
+                {/* Badges/Tags */}
                 <div className='flex flex-wrap gap-2'>
-                    <span className='rounded-full border border-white/10 bg-white/0.04 px-2.5 py-1 text-[11px] md:text-xs text-white/75'>
+                    <span className='rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] md:text-xs text-white/75'>
                         {item.category}
                     </span>
-                    <span className='rounded-full border border-white/10 bg-white/0.04 px-2.5 py-1 text-[11px] md:text-xs text-white/75 capitalize'>
+                    <span className='rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] md:text-xs text-white/75 capitalize'>
                         {item.type}
                     </span>
-                    <span className='rounded-full border border-white/10 bg-white/0.04 px-2.5 py-1 text-[11px] md:text-xs text-white/75'>
+                    <span className='rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-[11px] md:text-xs text-white/75'>
                         {item.size}
                     </span>
                 </div>
 
+                {/* Title & Gender */}
                 <div className='space-y-1 font-poppins'>
-                    <h3 className='text-lg md:text-xl font-semibold leading-tight text-white line-clamp-1'>
+                    <h3 className='text-lg md:text-xl font-semibold leading-tight text-white line-clamp-1' title={item.name}>
                         {item.name}
                     </h3>
                     <p className='text-sm text-white/55 line-clamp-1'>
@@ -94,32 +100,37 @@ function ProductCard({ item }) {
                     </p>
                 </div>
 
-                <p className='text-sm md:text-15px leading-6 text-white/75 line-clamp-2 min-h-48px'>
+                {/* Short Description - DIKUNCI tingginya agar space-nya selalu sama */}
+                <p className='text-sm leading-6 text-white/75 line-clamp-2 h-12 overflow-hidden'>
                     {item.shortDescription}
                 </p>
 
-                <div className='flex flex-wrap gap-2 min-h-32px'>
+                {/* Hero Tags - DIKUNCI tingginya agar space-nya selalu sama */}
+                <div className='flex flex-wrap gap-2 h-7 overflow-hidden'>
                     {item.heroTag?.slice(0, 3).map((tag) => (
                         <span
                             key={tag}
-                            className='rounded-full border border-white/10 bg-white/0.04 px-2.5 py-1 text-[11px] md:text-xs text-white/75'
+                            className='rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-[11px] md:text-xs text-white/75'
                         >
                             {tag}
                         </span>
                     ))}
                 </div>
 
-                <div className='mt-auto flex items-center justify-between gap-3 pt-2 font-poppins'>
-                    <div className='text-right space-y-1'>
+                {/* Footer / Action Area - Didorong otomatis ke paling bawah */}
+                <div className='mt-auto pt-4 border-t border-white/5 flex flex-col sm:flex-row sm:items-center justify-between gap-3 font-poppins'>
+                    <div className='space-y-1'>
                         <p className='text-lg md:text-xl font-semibold text-white'>
                             {formatRupiah(item.price)}
                         </p>
                     </div>
-                    <Link href={item.link} target="_blank" className='space-y-1 w-full md:w-auto py-2 px-6 rounded-full border transition-all duration-300 text-sm md:text-md hover:border-white/50 bg-white/10 hover:text-white border-white/20 text-white/70 cursor-pointer'>
+                    <Link 
+                        href={item.link} 
+                        target="_blank" 
+                        className='block text-center w-full sm:w-auto py-2 px-5 rounded-full border transition-all duration-300 text-sm hover:border-white/50 bg-white/10 hover:text-white border-white/20 text-white/70 cursor-pointer whitespace-nowrap'
+                    >
                         view product
                     </Link>
-
-
                 </div>
             </div>
         </div>
